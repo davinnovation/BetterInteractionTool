@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "explain", "explain", "{90CFB4EE-533F-413E-881E-89B50800AE72}"
+	ProjectSection(SolutionItems) = preProject
+		readme.txt = readme.txt
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BIT_window", "BIT_window\BIT_window.csproj", "{B0AD67FC-B4BB-4BDB-9325-9AD0D2EB7262}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BIT_content", "BIT_content\BIT_content.csproj", "{F8EA31C2-0438-4047-B9F4-6DD297E2B906}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B0AD67FC-B4BB-4BDB-9325-9AD0D2EB7262}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B0AD67FC-B4BB-4BDB-9325-9AD0D2EB7262}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B0AD67FC-B4BB-4BDB-9325-9AD0D2EB7262}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B0AD67FC-B4BB-4BDB-9325-9AD0D2EB7262}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F8EA31C2-0438-4047-B9F4-6DD297E2B906}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F8EA31C2-0438-4047-B9F4-6DD297E2B906}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F8EA31C2-0438-4047-B9F4-6DD297E2B906}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F8EA31C2-0438-4047-B9F4-6DD297E2B906}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

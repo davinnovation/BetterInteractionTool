@@ -1,0 +1,1 @@
+C:\Users\dongheon\Documents\GitHub\BetterInteractionTool\src\BIT\bin\Debug\BIT.exe.config
