@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -13,28 +12,17 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using MahApps.Metro.Controls;
-using BIT.Windows;
 
-namespace BIT
+namespace BIT.Windows
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for AboutWindow.xaml
     /// </summary>
-    public partial class MainWindow : MetroWindow
+    public partial class AboutWindow : MetroWindow
     {
-        public MainWindow()
+        public AboutWindow()
         {
             InitializeComponent();
-        }
-
-        private void LaunchSettings(object sender, RoutedEventArgs e)
-        {
-            new SettingsWindow() { Owner = this }.Show();
-        }
-
-        private void LaunchAbout(object sender, RoutedEventArgs e)
-        {
-            new AboutWindow() { Owner = this }.Show();
         }
     }
 }

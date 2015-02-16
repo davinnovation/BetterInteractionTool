@@ -1,0 +1,13 @@
+﻿<Controls:MetroWindow x:Class="BIT.Windows.SettingsWindow"
+                      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                      xmlns:Controls="http://metro.mahapps.com/winfx/xaml/controls"
+                      Title="SettingsWindow"
+                      Height="350"
+                      Width="525"
+                      WindowStartupLocation="CenterOwner"
+                      GlowBrush="{DynamicResource AccentColorBrush}">
+    <Grid>
+
+    </Grid>
+</Controls:MetroWindow>
