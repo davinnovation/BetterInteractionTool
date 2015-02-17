@@ -18,4 +18,26 @@
                     Content="About" />
         </Controls:WindowCommands>
     </Controls:MetroWindow.RightWindowCommands>
+    
+    <Controls:MetroContentControl>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            
+            <Controls:MetroAnimatedSingleRowTabControl Grid.Row="1" x:Name="MainTabControl">
+                <TabItem Header="Keyboard">
+                </TabItem>
+            </Controls:MetroAnimatedSingleRowTabControl>
+            
+            <StatusBar Grid.Row="2">
+                <StatusBarItem>MahApps.Metro DEMO Application</StatusBarItem>
+                <Separator Style="{StaticResource MetroStatusBarSeparator}" />
+                <StatusBarItem>Selected Tab:</StatusBarItem>
+                <StatusBarItem Content="{Binding ElementName=MainTabControl, Path=SelectedItem.Header, Mode=OneWay}" />
+            </StatusBar>
+        </Grid>
+    </Controls:MetroContentControl>
 </Controls:MetroWindow>

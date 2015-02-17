@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\dongheon\Documents\GitHub\BetterInteractionTool\src\BIT\App.xaml
-4-1973723572
+51118565275
 
-11-1582329831
+14206578206
 14-1457341008
-MainWindow.xaml;Resources\Icons.xaml;Windows\AboutWindow.xaml;Windows\SettingsWindow.xaml;
+MainWindow.xaml;Resources\Icons.xaml;Views\MainContent.xaml;Windows\AboutWindow.xaml;Windows\SettingsWindow.xaml;
 
 False
 
