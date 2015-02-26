@@ -1,0 +1,10 @@
+c:\users\jakebaek\documents\visual studio 2013\Projects\Home\Home\bin\Debug\Home.exe.config
+c:\users\jakebaek\documents\visual studio 2013\Projects\Home\Home\obj\Debug\Home.csprojResolveAssemblyReference.cache
+c:\users\jakebaek\documents\visual studio 2013\Projects\Home\Home\obj\Debug\MainWindow.baml
+c:\users\jakebaek\documents\visual studio 2013\Projects\Home\Home\obj\Debug\Resources\Icons.baml
+c:\users\jakebaek\documents\visual studio 2013\Projects\Home\Home\obj\Debug\MainWindow.g.cs
+c:\users\jakebaek\documents\visual studio 2013\Projects\Home\Home\obj\Debug\Resources\Icons.g.cs
+c:\users\jakebaek\documents\visual studio 2013\Projects\Home\Home\obj\Debug\UserControl.g.cs
+c:\users\jakebaek\documents\visual studio 2013\Projects\Home\Home\obj\Debug\App.g.cs
+c:\users\jakebaek\documents\visual studio 2013\Projects\Home\Home\obj\Debug\Home_MarkupCompile.cache
+c:\users\jakebaek\documents\visual studio 2013\Projects\Home\Home\obj\Debug\Home_MarkupCompile.lref
