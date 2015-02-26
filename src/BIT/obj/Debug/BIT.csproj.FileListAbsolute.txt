@@ -21,3 +21,7 @@ C:\Users\dongheon\Documents\GitHub\BetterInteractionTool\src\BIT\obj\Debug\Windo
 C:\Users\dongheon\Documents\GitHub\BetterInteractionTool\src\BIT\obj\Debug\Windows\SettingsWindow.baml
 C:\Users\dongheon\Documents\GitHub\BetterInteractionTool\src\BIT\obj\Debug\Windows\AboutWindow.g.cs
 C:\Users\dongheon\Documents\GitHub\BetterInteractionTool\src\BIT\obj\Debug\Windows\SettingsWindow.g.cs
+C:\Users\dongheon\Documents\GitHub\BetterInteractionTool\src\BIT\obj\Debug\Views\MainContent.baml
+C:\Users\dongheon\Documents\GitHub\BetterInteractionTool\src\BIT\obj\Debug\Views\MainContent.g.cs
+C:\Users\dongheon\Documents\GitHub\BetterInteractionTool\src\BIT\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\dongheon\Documents\GitHub\BetterInteractionTool\src\BIT\obj\Debug\BIT_MarkupCompile.lref

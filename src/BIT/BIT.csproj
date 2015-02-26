@@ -63,6 +63,7 @@
     </ApplicationDefinition>
     <Compile Include="MainWindowViewModel.cs" />
     <Compile Include="Models\LeapMotion_gestures.cs" />
+    <Compile Include="Models\SimpleCommand.cs" />
     <Compile Include="Views\MainContent.xaml.cs">
       <DependentUpon>MainContent.xaml</DependentUpon>
     </Compile>
