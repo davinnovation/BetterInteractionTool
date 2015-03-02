@@ -38,11 +38,13 @@
 
             <TabControl Controls:TabControlHelper.IsUnderlined="True" Grid.Row="1" x:Name="MainTabControl">
                 <TabItem Header="Keyboard">
-                    <Views:MainContent DataContext="{Binding}" />
+                    <Views:Keyboard DataContext="{Binding}" />
                 </TabItem>
                 <TabItem Header="Mouse">
+                    <Views:MainContent DataContext="{Binding}" />
                 </TabItem>
                 <TabItem Header="Leap Motion">
+                    <Views:MainContent DataContext="{Binding}" />
                 </TabItem>
             </TabControl>
             
