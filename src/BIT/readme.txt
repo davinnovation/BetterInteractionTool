@@ -1,1 +1,2 @@
-이미지 파일은 Resources 폴더 내에만 저장
+Save Image file at Resources folder
+UserControl -> d:DesignWidth="800"
