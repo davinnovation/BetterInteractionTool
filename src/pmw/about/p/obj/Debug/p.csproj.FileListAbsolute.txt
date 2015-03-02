@@ -2,3 +2,4 @@ c:\users\민욱\documents\visual studio 2013\Projects\p\p\bin\Debug\p.exe.config
 c:\users\민욱\documents\visual studio 2013\Projects\p\p\obj\Debug\p.csprojResolveAssemblyReference.cache
 c:\users\민욱\documents\visual studio 2013\Projects\p\p\obj\Debug\App.g.cs
 c:\users\민욱\documents\visual studio 2013\Projects\p\p\obj\Debug\p_MarkupCompile.cache
+C:\Users\dongheon\Documents\GitHub\BetterInteractionTool\src\pmw\about\p\bin\Debug\p.exe.config
