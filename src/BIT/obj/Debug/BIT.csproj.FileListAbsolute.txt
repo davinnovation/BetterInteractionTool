@@ -23,4 +23,5 @@ C:\Users\dongheon\Documents\GitHub\BetterInteractionTool\src\BIT\obj\Debug\Windo
 C:\Users\dongheon\Documents\GitHub\BetterInteractionTool\src\BIT\obj\Debug\Views\MainContent.baml
 C:\Users\dongheon\Documents\GitHub\BetterInteractionTool\src\BIT\obj\Debug\Views\MainContent.g.cs
 C:\Users\dongheon\Documents\GitHub\BetterInteractionTool\src\BIT\obj\Debug\BIT_MarkupCompile.lref
+C:\Users\dongheon\Documents\GitHub\BetterInteractionTool\src\BIT\obj\Debug\GeneratedInternalTypeHelper.g.cs
 C:\Users\dongheon\Documents\GitHub\BetterInteractionTool\src\BIT\obj\Debug\BIT.csprojResolveAssemblyReference.cache

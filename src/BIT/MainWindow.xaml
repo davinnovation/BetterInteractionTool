@@ -35,15 +35,16 @@
                 <RowDefinition Height="*" />
                 <RowDefinition Height="Auto" />
             </Grid.RowDefinitions>
-            
-            <Controls:MetroAnimatedSingleRowTabControl Grid.Row="1" x:Name="MainTabControl">
+
+            <TabControl Controls:TabControlHelper.IsUnderlined="True" Grid.Row="1" x:Name="MainTabControl">
                 <TabItem Header="Keyboard">
+                    <Views:MainContent DataContext="{Binding}" />
                 </TabItem>
                 <TabItem Header="Mouse">
                 </TabItem>
                 <TabItem Header="Leap Motion">
                 </TabItem>
-            </Controls:MetroAnimatedSingleRowTabControl>
+            </TabControl>
             
             <StatusBar Grid.Row="2">
                 <StatusBarItem>Better Interaction Tool</StatusBarItem>
