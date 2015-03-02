@@ -2,6 +2,8 @@
                       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                       xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+                      xmlns:BIT="clr-namespace:BIT"
+                      xmlns:Dialog="clr-namespace:MahApps.Metro.Controls.Dialogs;assembly=MahApps.Metro"
                       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
                       xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
                       xmlns:Views="clr-namespace:BIT.Views"
@@ -36,17 +38,15 @@
             
             <Controls:MetroAnimatedSingleRowTabControl Grid.Row="1" x:Name="MainTabControl">
                 <TabItem Header="Keyboard">
-                    
                 </TabItem>
                 <TabItem Header="Mouse">
                 </TabItem>
                 <TabItem Header="Leap Motion">
-                    <Views:LeapMotion_gesutre DataContext="{Binding}" />
                 </TabItem>
             </Controls:MetroAnimatedSingleRowTabControl>
             
             <StatusBar Grid.Row="2">
-                <StatusBarItem>MahApps.Metro DEMO Application</StatusBarItem>
+                <StatusBarItem>Better Interaction Tool</StatusBarItem>
                 <Separator Style="{StaticResource MetroStatusBarSeparator}" />
                 <StatusBarItem>Selected Tab:</StatusBarItem>
                 <StatusBarItem Content="{Binding ElementName=MainTabControl, Path=SelectedItem.Header, Mode=OneWay}" />
