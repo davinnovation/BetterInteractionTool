@@ -30,3 +30,4 @@ C:\Users\dongheon\Documents\GitHub\BetterInteractionTool\src\BIT\obj\Debug\Views
 C:\Users\dongheon\Documents\GitHub\BetterInteractionTool\src\BIT\obj\Debug\Views\Mouse.baml
 C:\Users\dongheon\Documents\GitHub\BetterInteractionTool\src\BIT\obj\Debug\Views\LeapMotion.g.cs
 C:\Users\dongheon\Documents\GitHub\BetterInteractionTool\src\BIT\obj\Debug\Views\Mouse.g.cs
+C:\Users\dongheon\Documents\GitHub\BetterInteractionTool\src\BIT\obj\Debug\BIT.csprojResolveAssemblyReference.cache

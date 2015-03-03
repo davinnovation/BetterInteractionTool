@@ -151,6 +151,7 @@
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
     <AppDesigner Include="Properties\" />
+    <None Include="resources\leapmotionicon.icns" />
     <Resource Include="resources\Entypo.ttf" />
   </ItemGroup>
   <ItemGroup>
@@ -167,6 +168,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="resources\logo_desktop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="resources\leapmotion.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
