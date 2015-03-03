@@ -26,3 +26,7 @@ C:\Users\dongheon\Documents\GitHub\BetterInteractionTool\src\BIT\obj\Debug\BIT.P
 C:\Users\dongheon\Documents\GitHub\BetterInteractionTool\src\BIT\obj\Debug\BIT.csproj.GenerateResource.Cache
 C:\Users\dongheon\Documents\GitHub\BetterInteractionTool\src\BIT\obj\Debug\BIT.exe
 C:\Users\dongheon\Documents\GitHub\BetterInteractionTool\src\BIT\obj\Debug\BIT.pdb
+C:\Users\dongheon\Documents\GitHub\BetterInteractionTool\src\BIT\obj\Debug\Views\LeapMotion.baml
+C:\Users\dongheon\Documents\GitHub\BetterInteractionTool\src\BIT\obj\Debug\Views\Mouse.baml
+C:\Users\dongheon\Documents\GitHub\BetterInteractionTool\src\BIT\obj\Debug\Views\LeapMotion.g.cs
+C:\Users\dongheon\Documents\GitHub\BetterInteractionTool\src\BIT\obj\Debug\Views\Mouse.g.cs

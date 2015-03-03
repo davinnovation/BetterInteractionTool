@@ -16,7 +16,14 @@
                       d:DesignHeight="600"
                       d:DesignWidth="800"
                       d:DataContext="{d:DesignInstance BIT:MainWindowViewModel}">
-
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Resources/Icons.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+    
     <Controls:MetroWindow.RightWindowCommands>
         <Controls:WindowCommands>
             <Button Click="LaunchSettings"
@@ -37,14 +44,14 @@
             </Grid.RowDefinitions>
 
             <TabControl Controls:TabControlHelper.IsUnderlined="True" Grid.Row="1" x:Name="MainTabControl">
-                <TabItem Header="Keyboard">
+                <TabItem Header="{DynamicResource appbar_input_keyboard}" Name="Keyboard">
                     <Views:Keyboard DataContext="{Binding}" />
                 </TabItem>
-                <TabItem Header="Mouse">
-                    <Views:MainContent DataContext="{Binding}" />
+                <TabItem Header="{DynamicResource appbar_hardware_mouse}" Name="Mouse">
+                    <Views:Mouse DataContext="{Binding}" />
                 </TabItem>
-                <TabItem Header="Leap Motion">
-                    <Views:MainContent DataContext="{Binding}" />
+                <TabItem Header="{DynamicResource appbar_leapmoation}" Name="LeapMotion">
+                    <Views:LeapMotion DataContext="{Binding}" />
                 </TabItem>
             </TabControl>
             
@@ -52,7 +59,7 @@
                 <StatusBarItem>Better Interaction Tool</StatusBarItem>
                 <Separator Style="{StaticResource MetroStatusBarSeparator}" />
                 <StatusBarItem>Selected Tab:</StatusBarItem>
-                <StatusBarItem Content="{Binding ElementName=MainTabControl, Path=SelectedItem.Header, Mode=OneWay}" />
+                <StatusBarItem Content="{Binding ElementName=MainTabControl, Path=SelectedItem.Name, Mode=OneWay}" />
             </StatusBar>
         </Grid>
     </Controls:MetroContentControl>
