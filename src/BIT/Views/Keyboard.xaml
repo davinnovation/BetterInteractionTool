@@ -44,7 +44,7 @@
                 <ListBox Grid.Row="1"
                          BorderThickness="1"
                          Margin="1"
-                         Height="450"
+                         Height="400"
                          SelectedIndex="0">
                     <ListBoxItem Content="Item 1" />
                     <ListBoxItem Content="Item 2" />
@@ -114,7 +114,7 @@
                 <ListBox Grid.Row="1"
                          BorderThickness="1"
                          Margin="1"
-                         Height="450"
+                         Height="400"
                          SelectedIndex="0">
                     <ListBoxItem Content="Item 1" />
                     <ListBoxItem Content="Item 2" />
@@ -178,19 +178,26 @@
                     <RowDefinition Height="Auto" />
                     <RowDefinition Height="Auto" />
                 </Grid.RowDefinitions>
-                <Label
-                       Content="Set"
-                       Style="{DynamicResource DescriptionHeaderStyle}" />
+                <ComboBox
+                      Controls:TextBoxHelper.ClearTextButton="True"
+                      Margin="0, 10, 0, 0"
+                      SelectedIndex="0"
+                      IsEditable="True">
+                    <ComboBoxItem Content="Set 1" />
+                    <ComboBoxItem Content="Set 2" />
+                    <ComboBoxItem Content="Very long Item 3 for MahApps.Metro" />
+                    <ComboBoxItem Content="Set 4" />
+                </ComboBox>
                 <ListView Grid.Row="1"
                          BorderThickness="1"
                          Margin="1"
-                         Height="450"
+                         Height="400"
                          SelectedIndex="0">
                     <ListView.View>
                         <GridView>
-                            <GridViewColumn DisplayMemberBinding="{Binding ArtistId}"
+                            <GridViewColumn DisplayMemberBinding="{Binding Keyboard_list}"
                                         Header="Gesture" />
-                            <GridViewColumn DisplayMemberBinding="{Binding Name}"
+                            <GridViewColumn DisplayMemberBinding="{Binding Function}"
                                         Header="Function" />
                         </GridView>
                     </ListView.View>
