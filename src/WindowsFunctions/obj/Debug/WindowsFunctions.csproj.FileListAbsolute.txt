@@ -1,0 +1,5 @@
+C:\Users\dongheon\Documents\GitHub\BetterInteractionTool\src\WindowsFunctions\bin\Debug\WindowsFunctions.dll
+C:\Users\dongheon\Documents\GitHub\BetterInteractionTool\src\WindowsFunctions\bin\Debug\WindowsFunctions.pdb
+C:\Users\dongheon\Documents\GitHub\BetterInteractionTool\src\WindowsFunctions\obj\Debug\WindowsFunctions.csprojResolveAssemblyReference.cache
+C:\Users\dongheon\Documents\GitHub\BetterInteractionTool\src\WindowsFunctions\obj\Debug\WindowsFunctions.dll
+C:\Users\dongheon\Documents\GitHub\BetterInteractionTool\src\WindowsFunctions\obj\Debug\WindowsFunctions.pdb

@@ -172,6 +172,12 @@
   <ItemGroup>
     <Resource Include="resources\leapmotion.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\WindowsFunctions\WindowsFunctions.csproj">
+      <Project>{16a7257a-984a-40cd-94ff-a825c1a81bbf}</Project>
+      <Name>WindowsFunctions</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
