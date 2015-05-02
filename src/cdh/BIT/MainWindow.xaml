@@ -1,0 +1,66 @@
+﻿<Controls:MetroWindow x:Class="BIT.MainWindow"
+                      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                      xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+                      xmlns:BIT="clr-namespace:BIT"
+                      xmlns:Dialog="clr-namespace:MahApps.Metro.Controls.Dialogs;assembly=MahApps.Metro"
+                      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                      xmlns:Views="clr-namespace:BIT.Views"
+                      Title="Better Interaction Tool"
+                      Width="960"
+                      Height="600"
+                      WindowStartupLocation="CenterScreen"
+                      GlowBrush="{DynamicResource AccentColorBrush}"
+                      mc:Ignorable="d"
+                      d:DesignHeight="600"
+                      d:DesignWidth="800"
+                      d:DataContext="{d:DesignInstance BIT:MainWindowViewModel}">
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Resources/Icons.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+    
+    <Controls:MetroWindow.RightWindowCommands>
+        <Controls:WindowCommands>
+            <Button Click="LaunchSettings"
+                    ToolTip="settings for bit"
+                    Content="Settings" />
+            <Button Click="LaunchAbout"
+                    ToolTip="About BIT"
+                    Content="About" />
+        </Controls:WindowCommands>
+    </Controls:MetroWindow.RightWindowCommands>
+    
+    <Controls:MetroContentControl>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <TabControl Controls:TabControlHelper.IsUnderlined="True" Grid.Row="1" x:Name="MainTabControl">
+                <TabItem Header="{DynamicResource appbar_input_keyboard}" Name="Keyboard">
+                    <Views:Keyboard DataContext="{Binding}" />
+                </TabItem>
+                <TabItem Header="{DynamicResource appbar_hardware_mouse}" Name="Mouse">
+                    <Views:Mouse DataContext="{Binding}" />
+                </TabItem>
+                <TabItem Header="{DynamicResource appbar_leapmoation}" Name="LeapMotion">
+                    <Views:LeapMotion DataContext="{Binding}" />
+                </TabItem>
+            </TabControl>
+            
+            <StatusBar Grid.Row="2">
+                <StatusBarItem>Better Interaction Tool</StatusBarItem>
+                <Separator Style="{StaticResource MetroStatusBarSeparator}" />
+                <StatusBarItem>Selected Tab:</StatusBarItem>
+                <StatusBarItem Content="{Binding ElementName=MainTabControl, Path=SelectedItem.Name, Mode=OneWay}" />
+            </StatusBar>
+        </Grid>
+    </Controls:MetroContentControl>
+</Controls:MetroWindow>
