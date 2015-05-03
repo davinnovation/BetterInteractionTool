@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace BIT.Models
 {
-    class Keyboard
+    public class Keyboard
     {
+        public int ID { get; set; }
+        public string List { get; set; }
     }
 }

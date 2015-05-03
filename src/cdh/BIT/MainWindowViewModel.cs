@@ -49,6 +49,8 @@ namespace BIT
 
         public MainWindowViewModel()
         {
+            Functions.Seed();
+
             // create accent color menu items for the demo
             this.AccentColors = ThemeManager.Accents
                                             .Select(a => new AccentColorMenuData() { Name = a.Name, ColorBrush = a.Resources["AccentColorBrush"] as Brush })
@@ -58,6 +60,10 @@ namespace BIT
             this.AppThemes = ThemeManager.AppThemes
                                            .Select(a => new AppThemeMenuData() { Name = a.Name, BorderColorBrush = a.Resources["BlackColorBrush"] as Brush, ColorBrush = a.Resources["WhiteColorBrush"] as Brush })
                                            .ToList();
+
+            Keyboards = Functions.Keyboards;
+            Leapmotions = Functions.LeapMotions;
+            Mouses = Functions.Mouses;
 
             FlipViewTemplateSelector = new RandomDataTemplateSelector();
 
@@ -79,6 +85,9 @@ namespace BIT
 
         public string Title { get; set; }
         public int SelectedIndex { get; set; }
+        public List<Models.Keyboard> Keyboards { get; set; }
+        public List<Models.LeapMotion> Leapmotions { get; set; }
+        public List<Models.Mouse> Mouses { get; set; }
         public List<AccentColorMenuData> AccentColors { get; set; }
         public List<AppThemeMenuData> AppThemes { get; set; }
 

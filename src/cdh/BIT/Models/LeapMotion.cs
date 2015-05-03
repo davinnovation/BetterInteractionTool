@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace BIT.Models
 {
-    class LeapMotion
+    public class LeapMotion
     {
+        public int ID { get; set; }
+        public string List { get; set; }
     }
 }

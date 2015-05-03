@@ -53,6 +53,9 @@
                 <TabItem Header="{DynamicResource appbar_leapmoation}" Name="LeapMotion">
                     <Views:LeapMotion DataContext="{Binding}" />
                 </TabItem>
+                <TabItem Header="{DynamicResource appbar_myo}" Name="Myo">
+                    <Views:Myo DataContext="{Binding}" />
+                </TabItem>
             </TabControl>
             
             <StatusBar Grid.Row="2">

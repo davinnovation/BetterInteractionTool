@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BIT.Models
 {
-    public class Mouse
+    public class Myo
     {
         public int ID { get; set; }
         public string List { get; set; }

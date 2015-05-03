@@ -64,9 +64,11 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="MainWindowViewModel.cs" />
+    <Compile Include="Models\Functions.cs" />
     <Compile Include="Models\Keyboard.cs" />
     <Compile Include="Models\LeapMotion.cs" />
     <Compile Include="Models\Mouse.cs" />
+    <Compile Include="Models\Myo.cs" />
     <Compile Include="Models\SimpleCommand.cs" />
     <Compile Include="Views\Keyboard.xaml.cs">
       <DependentUpon>Keyboard.xaml</DependentUpon>
@@ -79,6 +81,9 @@
     </Compile>
     <Compile Include="Views\Mouse.xaml.cs">
       <DependentUpon>Mouse.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Myo.xaml.cs">
+      <DependentUpon>Myo.xaml</DependentUpon>
     </Compile>
     <Compile Include="Windows\AboutWindow.xaml.cs">
       <DependentUpon>AboutWindow.xaml</DependentUpon>
@@ -115,6 +120,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\Mouse.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Myo.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -171,6 +180,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="resources\leapmotion.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="resources\myo1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
