@@ -1,0 +1,6 @@
+C:\Users\dongheon\Documents\GitHub\BetterInteractionTool\src\cdh\BIT\BIT_Functions\bin\Debug\BIT_Functions.dll
+C:\Users\dongheon\Documents\GitHub\BetterInteractionTool\src\cdh\BIT\BIT_Functions\bin\Debug\BIT_Functions.pdb
+C:\Users\dongheon\Documents\GitHub\BetterInteractionTool\src\cdh\BIT\BIT_Functions\obj\Debug\BIT_Functions.dll
+C:\Users\dongheon\Documents\GitHub\BetterInteractionTool\src\cdh\BIT\BIT_Functions\obj\Debug\BIT_Functions.pdb
+C:\Users\dongheon\Documents\GitHub\BetterInteractionTool\src\cdh\BIT\BIT_Functions\bin\Debug\Shortcut.dll
+C:\Users\dongheon\Documents\GitHub\BetterInteractionTool\src\cdh\BIT\BIT_Functions\bin\Debug\Shortcut.xml

@@ -69,3 +69,7 @@ C:\Users\dongheon\Documents\GitHub\BetterInteractionTool\src\cdh\BIT\obj\Debug\B
 C:\Users\dongheon\Documents\GitHub\BetterInteractionTool\src\cdh\BIT\obj\Debug\BIT.csprojResolveAssemblyReference.cache
 C:\Users\dongheon\Documents\GitHub\BetterInteractionTool\src\cdh\BIT\obj\Debug\Views\Myo.g.cs
 C:\Users\dongheon\Documents\GitHub\BetterInteractionTool\src\cdh\BIT\obj\Debug\Views\Myo.baml
+C:\Users\dongheon\Documents\GitHub\BetterInteractionTool\src\cdh\BIT\bin\Debug\BIT_Functions.dll
+C:\Users\dongheon\Documents\GitHub\BetterInteractionTool\src\cdh\BIT\bin\Debug\BIT_Functions.pdb
+C:\Users\dongheon\Documents\GitHub\BetterInteractionTool\src\cdh\BIT\bin\Debug\Shortcut.dll
+C:\Users\dongheon\Documents\GitHub\BetterInteractionTool\src\cdh\BIT\bin\Debug\Shortcut.pdb

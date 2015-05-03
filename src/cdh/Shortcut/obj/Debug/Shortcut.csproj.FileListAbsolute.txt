@@ -1,0 +1,5 @@
+C:\Users\dongheon\Desktop\Shortcut-master\Shortcut\bin\Debug\Shortcut.dll
+C:\Users\dongheon\Desktop\Shortcut-master\Shortcut\bin\Debug\Shortcut.pdb
+C:\Users\dongheon\Desktop\Shortcut-master\Shortcut\obj\Debug\Shortcut.csprojResolveAssemblyReference.cache
+C:\Users\dongheon\Desktop\Shortcut-master\Shortcut\obj\Debug\Shortcut.dll
+C:\Users\dongheon\Desktop\Shortcut-master\Shortcut\obj\Debug\Shortcut.pdb
