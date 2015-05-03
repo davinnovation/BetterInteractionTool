@@ -1,0 +1,42 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Ember" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="EnableSoundEffect" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="CaptureAreaHotkey" Type="Shortcut.Hotkey" Scope="User">
+      <Value Profile="(Default)">Control, D1</Value>
+    </Setting>
+    <Setting Name="UploadImage" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="OnUploadCopyLinkToClipboard" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="OnUploadOpenImageInBrowser" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="CaptureFullscreenHotkey" Type="Shortcut.Hotkey" Scope="User">
+      <Value Profile="(Default)">Control, D2</Value>
+    </Setting>
+    <Setting Name="CaptureActiveWindowHotkey" Type="Shortcut.Hotkey" Scope="User">
+      <Value Profile="(Default)">Control, D3</Value>
+    </Setting>
+    <Setting Name="SaveImage" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="UploadFormat" Type="System.Drawing.Imaging.ImageFormat" Scope="User">
+      <Value Profile="(Default)">Png</Value>
+    </Setting>
+    <Setting Name="SaveFormat" Type="System.Drawing.Imaging.ImageFormat" Scope="User">
+      <Value Profile="(Default)">Png</Value>
+    </Setting>
+    <Setting Name="SaveDirectory" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="Host" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Imgur</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

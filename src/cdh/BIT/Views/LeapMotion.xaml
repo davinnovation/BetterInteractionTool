@@ -88,37 +88,11 @@
                        Style="{DynamicResource DescriptionHeaderStyle}" />
                 <ListBox Grid.Row="1"
                          BorderThickness="1"
+                         ItemsSource="{Binding Functions1}"
+                         DisplayMemberPath="Func"
                          Margin="1"
                          Height="400"
-                         SelectedIndex="0">
-                    <ListBoxItem Content="Item 1" />
-                    <ListBoxItem Content="Item 2" />
-                    <ListBoxItem Content="Item 3" />
-                    <ListBoxItem Content="Item 1" />
-                    <ListBoxItem Content="Item 2" />
-                    <ListBoxItem Content="Item 3" />
-                    <ListBoxItem Content="Item 1" />
-                    <ListBoxItem Content="Item 2" />
-                    <ListBoxItem Content="Item 3" />
-                    <ListBoxItem Content="Item 1" />
-                    <ListBoxItem Content="Item 2" />
-                    <ListBoxItem Content="Item 3" />
-                    <ListBoxItem Content="Item 1" />
-                    <ListBoxItem Content="Item 2" />
-                    <ListBoxItem Content="Item 3" />
-                    <ListBoxItem Content="Item 1" />
-                    <ListBoxItem Content="Item 2" />
-                    <ListBoxItem Content="Item 3" />
-                    <ListBoxItem Content="Item 1" />
-                    <ListBoxItem Content="Item 2" />
-                    <ListBoxItem Content="Item 3" />
-                    <ListBoxItem Content="Item 1" />
-                    <ListBoxItem Content="Item 2" />
-                    <ListBoxItem Content="Item 3" />
-                    <ListBoxItem Content="Item 1" />
-                    <ListBoxItem Content="Item 2" />
-                    <ListBoxItem Content="Item 3" />
-                </ListBox>
+                         SelectedIndex="0" />
             </Grid>
         </StackPanel>
         <StackPanel Grid.Column="3">

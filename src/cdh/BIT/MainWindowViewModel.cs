@@ -64,6 +64,8 @@ namespace BIT
             Keyboards = Functions.Keyboards;
             Leapmotions = Functions.LeapMotions;
             Mouses = Functions.Mouses;
+            Myos = Functions.Myos;
+            Functions1 = Functions.Functions1;
 
             FlipViewTemplateSelector = new RandomDataTemplateSelector();
 
@@ -88,6 +90,8 @@ namespace BIT
         public List<Models.Keyboard> Keyboards { get; set; }
         public List<Models.LeapMotion> Leapmotions { get; set; }
         public List<Models.Mouse> Mouses { get; set; }
+        public List<Models.Myo> Myos { get; set; }
+        public List<Models.Function> Functions1 { get; set; }
         public List<AccentColorMenuData> AccentColors { get; set; }
         public List<AppThemeMenuData> AppThemes { get; set; }
 

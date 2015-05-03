@@ -88,37 +88,11 @@
                        Style="{DynamicResource DescriptionHeaderStyle}" />
                 <ListBox Grid.Row="1"
                          BorderThickness="1"
+                         ItemsSource="{Binding Functions1}"
+                         DisplayMemberPath="Func"
                          Margin="1"
                          Height="400"
-                         SelectedIndex="0">
-                    <ListBoxItem Content="Item 1" />
-                    <ListBoxItem Content="Item 2" />
-                    <ListBoxItem Content="Item 3" />
-                    <ListBoxItem Content="Item 1" />
-                    <ListBoxItem Content="Item 2" />
-                    <ListBoxItem Content="Item 3" />
-                    <ListBoxItem Content="Item 1" />
-                    <ListBoxItem Content="Item 2" />
-                    <ListBoxItem Content="Item 3" />
-                    <ListBoxItem Content="Item 1" />
-                    <ListBoxItem Content="Item 2" />
-                    <ListBoxItem Content="Item 3" />
-                    <ListBoxItem Content="Item 1" />
-                    <ListBoxItem Content="Item 2" />
-                    <ListBoxItem Content="Item 3" />
-                    <ListBoxItem Content="Item 1" />
-                    <ListBoxItem Content="Item 2" />
-                    <ListBoxItem Content="Item 3" />
-                    <ListBoxItem Content="Item 1" />
-                    <ListBoxItem Content="Item 2" />
-                    <ListBoxItem Content="Item 3" />
-                    <ListBoxItem Content="Item 1" />
-                    <ListBoxItem Content="Item 2" />
-                    <ListBoxItem Content="Item 3" />
-                    <ListBoxItem Content="Item 1" />
-                    <ListBoxItem Content="Item 2" />
-                    <ListBoxItem Content="Item 3" />
-                </ListBox>
+                         SelectedIndex="0" />
             </Grid>
         </StackPanel>
         <StackPanel Grid.Column="3">
@@ -153,16 +127,9 @@
                     <RowDefinition Height="Auto" />
                     <RowDefinition Height="Auto" />
                 </Grid.RowDefinitions>
-                <ComboBox
-                      Controls:TextBoxHelper.ClearTextButton="True"
-                      Margin="0, 10, 0, 0"
-                      SelectedIndex="0"
-                      IsEditable="True">
-                    <ComboBoxItem Content="Set 1" />
-                    <ComboBoxItem Content="Set 2" />
-                    <ComboBoxItem Content="Very long Item 3 for MahApps.Metro" />
-                    <ComboBoxItem Content="Set 4" />
-                </ComboBox>
+                <Label
+                       Content="Set"
+                       Style="{DynamicResource DescriptionHeaderStyle}" />
                 <ListView Grid.Row="1"
                          BorderThickness="1"
                          Margin="1"

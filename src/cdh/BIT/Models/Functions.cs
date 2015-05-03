@@ -8,11 +8,14 @@ namespace BIT.Models
 {
     public class Function
     {
+        public string Func { get; set; }
         public int ID { get; set; }
     }
 
     public static class Functions
     {
+        public static List<Function> Functions1 { get; set; }
+
         public static List<Keyboard> Keyboards { get; set; }
         public static List<LeapMotion> LeapMotions { get; set; }
         public static List<Mouse> Mouses { get; set; }
@@ -52,6 +55,14 @@ namespace BIT.Models
             };
             i = 0;
             Myos.ForEach(x => x.ID = ++i);
+            
+            Functions1 = new List<Function>
+            {
+                new Function { Func = "1" },
+                new Function { Func = "2" }
+            };
+            i = 0;
+            Functions1.ForEach(x => x.ID = ++i);
         }
     }
 }
