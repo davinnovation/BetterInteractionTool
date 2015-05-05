@@ -6,7 +6,8 @@ using BIT_Functions;
 using Shortcut;
 using MahApps.Metro.Controls;
 using MahApps.Metro.Controls.Dialogs;
-
+using BIT.Connect;
+using Leap;
 
 namespace BIT
 {
@@ -26,12 +27,11 @@ namespace BIT
             DataContext = _viewModel;
 
             InitializeComponent();
+            
+            Connect_Leapmotion leapmotion_listener = new Connect_Leapmotion();
+            Controller controller = new Controller();
+            controller.AddListener(leapmotion_listener);
 
-            _hotkeyBinder.Bind(Modifiers.Control, Keys.F).To(HotkeyCallback);
-        }
-
-        private void Window_Initialized(object sender, EventArgs e)
-        {
             _hotkeyBinder.Bind(Modifiers.Control, Keys.F).To(HotkeyCallback);
         }
 

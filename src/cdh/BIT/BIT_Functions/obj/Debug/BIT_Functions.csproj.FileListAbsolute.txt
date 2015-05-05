@@ -4,3 +4,4 @@ C:\Users\dongheon\Documents\GitHub\BetterInteractionTool\src\cdh\BIT\BIT_Functio
 C:\Users\dongheon\Documents\GitHub\BetterInteractionTool\src\cdh\BIT\BIT_Functions\obj\Debug\BIT_Functions.pdb
 C:\Users\dongheon\Documents\GitHub\BetterInteractionTool\src\cdh\BIT\BIT_Functions\bin\Debug\Shortcut.dll
 C:\Users\dongheon\Documents\GitHub\BetterInteractionTool\src\cdh\BIT\BIT_Functions\bin\Debug\Shortcut.xml
+C:\Users\dongheon\Documents\GitHub\BetterInteractionTool\src\cdh\BIT\BIT_Functions\obj\Debug\BIT_Functions.csprojResolveAssemblyReference.cache

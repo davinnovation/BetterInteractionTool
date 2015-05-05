@@ -2,3 +2,4 @@ C:\Users\dongheon\Documents\GitHub\BetterInteractionTool\src\cdh\Shortcut\bin\x8
 C:\Users\dongheon\Documents\GitHub\BetterInteractionTool\src\cdh\Shortcut\bin\x86\Debug\Shortcut.pdb
 C:\Users\dongheon\Documents\GitHub\BetterInteractionTool\src\cdh\Shortcut\obj\x86\Debug\Shortcut.dll
 C:\Users\dongheon\Documents\GitHub\BetterInteractionTool\src\cdh\Shortcut\obj\x86\Debug\Shortcut.pdb
+C:\Users\dongheon\Documents\GitHub\BetterInteractionTool\src\cdh\Shortcut\obj\x86\Debug\Shortcut.csprojResolveAssemblyReference.cache

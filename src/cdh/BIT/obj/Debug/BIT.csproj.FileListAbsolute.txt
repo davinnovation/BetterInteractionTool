@@ -73,3 +73,5 @@ C:\Users\dongheon\Documents\GitHub\BetterInteractionTool\src\cdh\BIT\bin\Debug\B
 C:\Users\dongheon\Documents\GitHub\BetterInteractionTool\src\cdh\BIT\bin\Debug\BIT_Functions.pdb
 C:\Users\dongheon\Documents\GitHub\BetterInteractionTool\src\cdh\BIT\bin\Debug\Shortcut.dll
 C:\Users\dongheon\Documents\GitHub\BetterInteractionTool\src\cdh\BIT\bin\Debug\Shortcut.pdb
+C:\Users\dongheon\Documents\GitHub\BetterInteractionTool\src\cdh\BIT\obj\Debug\BIT_Content.g.cs
+C:\Users\dongheon\Documents\GitHub\BetterInteractionTool\src\cdh\BIT\bin\Debug\LeapCSharp.NET4.0.dll
