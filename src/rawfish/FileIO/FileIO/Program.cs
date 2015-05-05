@@ -1,11 +1,11 @@
 ﻿/*
  * Program for manipulation of BIT_match.txt
  * Consists two functions
- *      add_to_file
+ *      add_to_file(int Device ,int Gesture,int Function,string datapath)
  *          search for the input in file,
  *          and if there is no match appends to the end of the text file
  *          
- *      delete_from_file
+ *      delete_from_file(int Device, int Gesture,int Function,string datapath)
  *          search for the input in file,
  *          and if there is a match, overwrites the file w/o the 
  *          line containing the input
@@ -26,10 +26,11 @@ namespace FileIO
     {
         static void Main(string[] args)
         {
-            /*test_function*/
+            /*test_function
             int Dev = 0, Ges = 1, Fun = 1;
             string datapath="data.txt";
             delete_from_file(Dev, Ges, Fun, datapath);
+             * */
         }
 
         static int add_to_file(int Dev, int Ges, int Fun, string datapath)
@@ -78,7 +79,6 @@ namespace FileIO
             StreamReader reader = File.OpenText(path);
             while((oldtext=reader.ReadLine())!=null){
                 if(!oldtext.Contains(dgf)){
-                    Console.WriteLine("This does not Contain\n");
                     newtext+=oldtext+Environment.NewLine;//Add all line in the file except dgf to 'newtext'.
                 }
             }
