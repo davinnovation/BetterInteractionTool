@@ -1,0 +1,9 @@
+c:\users\jakebaek\documents\visual studio 2013\Projects\FileIO\FileIO\bin\Debug\FileIO.exe.config
+C:\Users\jakebaek\Documents\Visual Studio 2013\Projects\FileIO\FileIO\bin\Debug\FileIO.exe
+C:\Users\jakebaek\Documents\Visual Studio 2013\Projects\FileIO\FileIO\bin\Debug\FileIO.pdb
+C:\Users\jakebaek\Documents\Visual Studio 2013\Projects\FileIO\FileIO\obj\Debug\FileIO.exe
+C:\Users\jakebaek\Documents\Visual Studio 2013\Projects\FileIO\FileIO\obj\Debug\FileIO.pdb
+C:\Users\jakebaek\Documents\Visual Studio 2013\Projects\FileIO\FileIO\obj\Debug\FileIO.csprojResolveAssemblyReference.cache
+C:\Users\jakebaek\Documents\GitHub\BetterInteractionTool\src\rawfish\FileIO\FileIO\bin\Debug\FileIO.exe.config
+C:\Users\jakebaek\Documents\GitHub\BetterInteractionTool\src\rawfish\FileIO\FileIO\obj\Debug\FileIO.exe
+C:\Users\jakebaek\Documents\GitHub\BetterInteractionTool\src\rawfish\FileIO\FileIO\obj\Debug\FileIO.pdb
