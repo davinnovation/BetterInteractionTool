@@ -75,3 +75,8 @@ C:\Users\dongheon\Documents\GitHub\BetterInteractionTool\src\cdh\BIT\bin\Debug\S
 C:\Users\dongheon\Documents\GitHub\BetterInteractionTool\src\cdh\BIT\bin\Debug\Shortcut.pdb
 C:\Users\dongheon\Documents\GitHub\BetterInteractionTool\src\cdh\BIT\obj\Debug\BIT_Content.g.cs
 C:\Users\dongheon\Documents\GitHub\BetterInteractionTool\src\cdh\BIT\bin\Debug\LeapCSharp.NET4.0.dll
+C:\Users\dongheon\Documents\GitHub\BetterInteractionTool\src\cdh\BIT\bin\Debug\x64\myo.dll
+C:\Users\dongheon\Documents\GitHub\BetterInteractionTool\src\cdh\BIT\bin\Debug\x86\myo.dll
+C:\Users\dongheon\Documents\GitHub\BetterInteractionTool\src\cdh\BIT\bin\Debug\MyoSharp.dll
+C:\Users\dongheon\Documents\GitHub\BetterInteractionTool\src\cdh\BIT\bin\Debug\Microsoft.Contracts.dll
+C:\Users\dongheon\Documents\GitHub\BetterInteractionTool\src\cdh\BIT\bin\Debug\MyoSharp.pdb

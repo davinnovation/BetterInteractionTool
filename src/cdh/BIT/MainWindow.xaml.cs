@@ -21,6 +21,10 @@ namespace BIT
 
         private readonly MainWindowViewModel _viewModel;
 
+        // Leap Motion
+        Connect_Leapmotion leapmotion_listener = new Connect_Leapmotion();
+        Controller controller = new Controller();
+        
         public MainWindow()
         {
             _viewModel = new MainWindowViewModel();
@@ -28,11 +32,10 @@ namespace BIT
 
             InitializeComponent();
             
-            Connect_Leapmotion leapmotion_listener = new Connect_Leapmotion();
-            Controller controller = new Controller();
             controller.AddListener(leapmotion_listener);
 
-            _hotkeyBinder.Bind(Modifiers.Control, Keys.F).To(HotkeyCallback);
+            _hotkeyBinder.Bind(Modifiers.Control, Keys.D).To(HotkeyCallback);
+            _hotkeyBinder.Bind(Modifiers.Control, Keys.E).To(HotkeyCallback2);
         }
 
         private void LaunchSettings(object sender, RoutedEventArgs e)
@@ -47,8 +50,18 @@ namespace BIT
 
         private void HotkeyCallback()
         {
-            System.Threading.Thread.Sleep(200);
             Windows_function.Call_Windows();
+            /*IntPtr hWndCharmBar = FindWindow("Charm Bar", null);
+            if(hWndCharmBar != null)
+                ShowWindow(hWndCharmBar, 0);
+            else
+                ShowWindow(hWndCharmBar, 0);
+            */
+        }
+
+        private void HotkeyCallback2()
+        {
+            Windows_function.Keyboard_space();
             /*IntPtr hWndCharmBar = FindWindow("Charm Bar", null);
             if(hWndCharmBar != null)
                 ShowWindow(hWndCharmBar, 0);
