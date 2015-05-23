@@ -31,7 +31,7 @@ namespace BIT
             DataContext = _viewModel;
 
             InitializeComponent();
-            
+            controller.SetPolicy(Controller.PolicyFlag.POLICY_BACKGROUND_FRAMES); // Leap Background
             controller.AddListener(leapmotion_listener);
 
             _hotkeyBinder.Bind(Modifiers.Control, Keys.D).To(HotkeyCallback);
@@ -50,7 +50,7 @@ namespace BIT
 
         private void HotkeyCallback()
         {
-            Windows_function.Call_Windows();
+            new Windows_function() { }.Call_Windows();
             /*IntPtr hWndCharmBar = FindWindow("Charm Bar", null);
             if(hWndCharmBar != null)
                 ShowWindow(hWndCharmBar, 0);
@@ -61,7 +61,7 @@ namespace BIT
 
         private void HotkeyCallback2()
         {
-            Windows_function.Keyboard_space();
+            new Windows_function() { }.Keyboard_space();
             /*IntPtr hWndCharmBar = FindWindow("Charm Bar", null);
             if(hWndCharmBar != null)
                 ShowWindow(hWndCharmBar, 0);

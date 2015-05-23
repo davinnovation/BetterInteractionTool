@@ -1,4 +1,5 @@
-﻿/*using System;
+﻿/*
+using System;
 using MyoSharp.Communication;
 using MyoSharp.Device;
 using MyoSharp.Exceptions;

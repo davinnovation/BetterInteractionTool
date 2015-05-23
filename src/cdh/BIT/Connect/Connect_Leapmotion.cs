@@ -62,13 +62,15 @@ namespace BIT.Connect
                         {
                             //Clockwise if angle is less than 90 degrees
                             //clockwiseness = "clockwise";
-                            Windows_function.Call_Windows();
+                            Console.WriteLine("CallWindows");
+                            new Windows_function() { }.Call_Windows();
                         
                         }
                         else
                         {
                             //clockwiseness = "counterclockwise";
-                            Windows_function.MouseClick_left();
+                            Console.WriteLine("CallMouseclickLeft");
+                            new Windows_function() { }.MouseClick_left();
                         }
                         break;
                     case Gesture.GestureType.TYPE_SWIPE:
@@ -79,9 +81,9 @@ namespace BIT.Connect
                                        + ", direction: " + swipe.Direction
                                        + ", speed: " + swipe.Speed);
                         if (swipe.Direction.x > 0.5)
-                            Windows_function.Keyboard_RightArrow();
+                            new Windows_function() { }.Keyboard_RightArrow();
                         else
-                            Windows_function.Keyboard_LeftArrow();
+                            new Windows_function() { }.Keyboard_LeftArrow();
                         break;
                     case Gesture.GestureType.TYPE_KEY_TAP:
                         KeyTapGesture keytap = new KeyTapGesture(gesture);
