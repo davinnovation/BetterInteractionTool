@@ -8,6 +8,9 @@ using MahApps.Metro.Controls;
 using MahApps.Metro.Controls.Dialogs;
 using BIT.Connect;
 using Leap;
+using MyoSharp.Communication;
+using MyoSharp.Device;
+using MyoSharp.Exceptions;
 
 namespace BIT
 {
@@ -24,6 +27,8 @@ namespace BIT
         // Leap Motion
         Connect_Leapmotion leapmotion_listener = new Connect_Leapmotion();
         Controller controller = new Controller();
+
+        // Myo
         
         public MainWindow()
         {
@@ -31,9 +36,41 @@ namespace BIT
             DataContext = _viewModel;
 
             InitializeComponent();
+
+            //Myo
+            var channel = Channel.Create(ChannelDriver.Create(ChannelBridge.Create()));
+            var hub = Hub.Create(channel);
+
+            hub.MyoConnected += (sender, e) =>
+            {
+                //set a bpoint here, doesn't get triggered
+                this.Dispatcher.Invoke((Action)(() =>
+                {
+                    //Console.WriteLine("Myo {0} has connected!", e.Myo.Handle);
+                    e.Myo.Vibrate(VibrationType.Short);
+
+                }));
+            };
+
+            // listen for when the Myo disconnects
+            hub.MyoDisconnected += (sender, e) =>
+            {
+                this.Dispatcher.Invoke((Action)(() =>
+                {
+                    //Console.WriteLine("Oh no! It looks like {0} arm Myo has disconnected!", e.Myo.Arm);
+                    e.Myo.Vibrate(VibrationType.Medium);
+                }));
+            };
+
+            // start listening for Myo data
+            channel.StartListening();
+            Connect_Myo.UserInputLoop(hub);
+
+            //LeapMotion
             controller.SetPolicy(Controller.PolicyFlag.POLICY_BACKGROUND_FRAMES); // Leap Background
             controller.AddListener(leapmotion_listener);
-
+            
+            //Keyboard
             _hotkeyBinder.Bind(Modifiers.Control, Keys.D).To(HotkeyCallback);
             _hotkeyBinder.Bind(Modifiers.Control, Keys.E).To(HotkeyCallback2);
         }

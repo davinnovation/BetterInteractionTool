@@ -1,73 +1,57 @@
-﻿/*
-using System;
+﻿using System;
+
 using MyoSharp.Communication;
 using MyoSharp.Device;
 using MyoSharp.Exceptions;
-
-using System;
-
-using MyoSharp.Device;
 
 namespace BIT.Connect
 {
     public class Connect_Myo
     {
         #region Methods
-        public static void Main()
+        internal static void UserInputLoop(IHub hub)
         {
-            // create a hub that will manage Myo devices for us
-            using (var channel = Channel.Create(
-                ChannelDriver.Create(ChannelBridge.Create(),
-                MyoErrorHandlerDriver.Create(MyoErrorHandlerBridge.Create()))))
-            using (var hub = Hub.Create(channel))
+            string userInput;
+            while (!string.IsNullOrEmpty((userInput = Console.ReadLine())))
             {
-                Console.WriteLine("Connect Myo Start");
-
-                // listen for when the Myo connects
-                hub.MyoConnected += (sender, e) =>
+                if (userInput.Equals("pose", StringComparison.OrdinalIgnoreCase))
                 {
-                    Console.WriteLine("Myo {0} has connected!", e.Myo.Handle);
-                    e.Myo.Vibrate(VibrationType.Medium);
-                    e.Myo.PoseChanged += Myo_PoseChanged;
-                    e.Myo.Locked += Myo_Locked;
-                    e.Myo.Unlocked += Myo_Unlocked;
-                };
-
-                // listen for when the Myo disconnects
-                hub.MyoDisconnected += (sender, e) =>
+                    foreach (var myo in hub.Myos)
+                    {
+                        Console.WriteLine("Myo {0} in pose {1}.", myo.Handle, myo.Pose);
+                    }
+                }
+                else if (userInput.Equals("arm", StringComparison.OrdinalIgnoreCase))
                 {
-                    Console.WriteLine("Oh no! It looks like {0} arm Myo has disconnected!", e.Myo.Arm);
-                    e.Myo.PoseChanged -= Myo_PoseChanged;
-                    e.Myo.Locked -= Myo_Locked;
-                    e.Myo.Unlocked -= Myo_Unlocked;
-                };
-
-                // start listening for Myo data
-                channel.StartListening();
-
-                // wait on user input
-                ConsoleHelper.UserInputLoop(hub);
+                    foreach (var myo in hub.Myos)
+                    {
+                        Console.WriteLine("Myo {0} is on {1} arm.", myo.Handle, myo.Arm.ToString().ToLower());
+                    }
+                }
+                else if (userInput.Equals("count", StringComparison.OrdinalIgnoreCase))
+                {
+                    Console.WriteLine("There are {0} Myo(s) connected.", hub.Myos.Count);
+                }
             }
         }
+
         #endregion
 
-
         #region Event Handlers
-        private static void Myo_PoseChanged(object sender, PoseEventArgs e)
+        public static void Myo_OrientationDataAcquired(object sender, OrientationDataEventArgs e)
         {
-            Console.WriteLine("{0} arm Myo detected {1} pose!", e.Myo.Arm, e.Myo.Pose);
-        }
+            const float PI = (float)System.Math.PI;
 
-        private static void Myo_Unlocked(object sender, MyoEventArgs e)
-        {
-            Console.WriteLine("{0} arm Myo has unlocked!", e.Myo.Arm);
-        }
+            // convert the values to a 0-9 scale (for easier digestion/understanding)
+            var roll = (int)((e.Roll + PI) / (PI * 2.0f) * 10);
+            var pitch = (int)((e.Pitch + PI) / (PI * 2.0f) * 10);
+            var yaw = (int)((e.Yaw + PI) / (PI * 2.0f) * 10);
 
-        private static void Myo_Locked(object sender, MyoEventArgs e)
-        {
-            Console.WriteLine("{0} arm Myo has locked!", e.Myo.Arm);
+            Console.Clear();
+            Console.WriteLine(@"Roll: {0}", roll);
+            Console.WriteLine(@"Pitch: {0}", pitch);
+            Console.WriteLine(@"Yaw: {0}", yaw);
         }
         #endregion
     }
 }
-*/
