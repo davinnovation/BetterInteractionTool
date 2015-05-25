@@ -50,7 +50,6 @@ C:\Users\dongheon\Documents\GitHub\BetterInteractionTool\src\cdh\BIT\obj\Debug\M
 C:\Users\dongheon\Documents\GitHub\BetterInteractionTool\src\cdh\BIT\obj\Debug\resources\Icons.g.cs
 C:\Users\dongheon\Documents\GitHub\BetterInteractionTool\src\cdh\BIT\obj\Debug\Views\Keyboard.g.cs
 C:\Users\dongheon\Documents\GitHub\BetterInteractionTool\src\cdh\BIT\obj\Debug\Views\LeapMotion.g.cs
-C:\Users\dongheon\Documents\GitHub\BetterInteractionTool\src\cdh\BIT\obj\Debug\Views\MainContent.g.cs
 C:\Users\dongheon\Documents\GitHub\BetterInteractionTool\src\cdh\BIT\obj\Debug\Views\Mouse.g.cs
 C:\Users\dongheon\Documents\GitHub\BetterInteractionTool\src\cdh\BIT\obj\Debug\Windows\AboutWindow.g.cs
 C:\Users\dongheon\Documents\GitHub\BetterInteractionTool\src\cdh\BIT\obj\Debug\Windows\SettingsWindow.g.cs
@@ -61,7 +60,6 @@ C:\Users\dongheon\Documents\GitHub\BetterInteractionTool\src\cdh\BIT\obj\Debug\B
 C:\Users\dongheon\Documents\GitHub\BetterInteractionTool\src\cdh\BIT\obj\Debug\MainWindow.baml
 C:\Users\dongheon\Documents\GitHub\BetterInteractionTool\src\cdh\BIT\obj\Debug\Views\Keyboard.baml
 C:\Users\dongheon\Documents\GitHub\BetterInteractionTool\src\cdh\BIT\obj\Debug\Views\LeapMotion.baml
-C:\Users\dongheon\Documents\GitHub\BetterInteractionTool\src\cdh\BIT\obj\Debug\Views\MainContent.baml
 C:\Users\dongheon\Documents\GitHub\BetterInteractionTool\src\cdh\BIT\obj\Debug\Views\Mouse.baml
 C:\Users\dongheon\Documents\GitHub\BetterInteractionTool\src\cdh\BIT\obj\Debug\BIT.g.resources
 C:\Users\dongheon\Documents\GitHub\BetterInteractionTool\src\cdh\BIT\obj\Debug\BIT.Properties.Resources.resources

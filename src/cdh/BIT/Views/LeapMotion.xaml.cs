@@ -48,7 +48,7 @@ namespace BIT.Views
                 int ges = Convert.ToInt16(taps[1]);
                 int fun = Convert.ToInt16(taps[2]);
 
-                if (device == 1)
+                if (device == 2)
                 {
                     Leap_listBox3.Items.Add(Leap_listBox1.Items[ges]);
                     Leap_listBox4.Items.Add(Leap_listBox2.Items[fun]);

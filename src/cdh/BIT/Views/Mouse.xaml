@@ -41,13 +41,13 @@
                 <Label
                        Content="Gesture"
                        Style="{DynamicResource DescriptionHeaderStyle}" />
-                <ListBox Grid.Row="1"
+                <ListBox x:Name="Mouse_listBox1"
+                         Grid.Row="1"
                          BorderThickness="1"
-                         ItemsSource="{Binding Mouses}"
-                         DisplayMemberPath="List"
                          Margin="1"
                          Height="400"
-                         SelectedIndex="0" />
+                         SelectedIndex="0">
+                </ListBox>
             </Grid>
         </StackPanel>
         <StackPanel Grid.Column="1">
@@ -58,19 +58,20 @@
                 <Grid.RowDefinitions>
                     <RowDefinition Height="550" />
                 </Grid.RowDefinitions>
-                <ToggleButton Width="50"
+                <Button   x:Name="Mouse_Button"
+                          Width="50"
                           Height="50"
                           VerticalAlignment="Center"
-                          Style="{DynamicResource MetroCircleToggleButtonStyle}">
+                          Style="{DynamicResource MetroCircleButtonStyle}" Click="Button_Click">
                     <Rectangle Width="20"
                            Height="20"
-                           Fill="{Binding Path=Foreground, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type ToggleButton}}}">
+                           Fill="{Binding Path=Foreground, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Button}}}">
                         <Rectangle.OpacityMask>
                             <VisualBrush Stretch="Fill"
                                      Visual="{DynamicResource appbar_add}" />
                         </Rectangle.OpacityMask>
                     </Rectangle>
-                </ToggleButton>
+                </Button>
             </Grid>
         </StackPanel>
         <StackPanel Grid.Column="2">
@@ -85,13 +86,13 @@
                 <Label
                        Content="Function"
                        Style="{DynamicResource DescriptionHeaderStyle}" />
-                <ListBox Grid.Row="1"
+                <ListBox x:Name="Mouse_listBox2"
+                         Grid.Row="1"
                          BorderThickness="1"
-                         ItemsSource="{Binding Functions1}"
-                         DisplayMemberPath="Func"
                          Margin="1"
                          Height="400"
-                         SelectedIndex="0" />
+                         SelectedIndex="0">
+                </ListBox>
             </Grid>
         </StackPanel>
         <StackPanel Grid.Column="3">
@@ -143,6 +144,15 @@
                         </GridView>
                     </ListView.View>
                 </ListView>
+                <ListBox x:Name="Mouse_listBox3" Grid.Row="1"
+                         BorderThickness="1"
+                         Margin="1,25,122,1"
+                         SelectedIndex="0"/>
+                <ListBox x:Name="Mouse_listBox4" Grid.Row="1"
+                         BorderThickness="1"
+                         Margin="68,25,57,1"
+                         SelectedIndex="0"/>
+
             </Grid>
         </StackPanel>
     </Grid>
