@@ -6,10 +6,14 @@ using BIT_Functions;
 using Shortcut;
 using MahApps.Metro.Controls;
 using MahApps.Metro.Controls.Dialogs;
+
 using BIT.Connect;
+
 using Leap;
+
 using MyoSharp.Communication;
 using MyoSharp.Device;
+using MyoSharp.Poses;
 using MyoSharp.Exceptions;
 
 namespace BIT
@@ -46,9 +50,21 @@ namespace BIT
                 //set a bpoint here, doesn't get triggered
                 this.Dispatcher.Invoke((Action)(() =>
                 {
-                    //Console.WriteLine("Myo {0} has connected!", e.Myo.Handle);
-                    e.Myo.Vibrate(VibrationType.Short);
+                    Console.WriteLine("Myo {0} has connected!", e.Myo.Handle);
+                    e.Myo.Vibrate(VibrationType.Long);
 
+                    // unlock the Myo so that it doesn't keep locking between our poses
+                    e.Myo.Unlock(UnlockType.Hold);
+
+                    // setup for the pose we want to watch for
+                    var pose = HeldPose.Create(e.Myo, Pose.Fist, Pose.FingersSpread, Pose.DoubleTap, Pose.WaveIn, Pose.WaveOut);
+
+                    // set the interval for the event to be fired as long as 
+                    // the pose is held by the user
+                    pose.Interval = TimeSpan.FromSeconds(0.5);
+
+                    pose.Start();
+                    pose.Triggered += Connect_Myo.Pose_Triggered;
                 }));
             };
 
@@ -57,7 +73,7 @@ namespace BIT
             {
                 this.Dispatcher.Invoke((Action)(() =>
                 {
-                    //Console.WriteLine("Oh no! It looks like {0} arm Myo has disconnected!", e.Myo.Arm);
+                    Console.WriteLine("Oh no! It looks like {0} arm Myo has disconnected!", e.Myo.Arm);
                     e.Myo.Vibrate(VibrationType.Medium);
                 }));
             };

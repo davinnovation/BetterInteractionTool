@@ -2,6 +2,7 @@
 
 using MyoSharp.Communication;
 using MyoSharp.Device;
+using MyoSharp.Poses;
 using MyoSharp.Exceptions;
 
 namespace BIT.Connect
@@ -38,19 +39,9 @@ namespace BIT.Connect
         #endregion
 
         #region Event Handlers
-        public static void Myo_OrientationDataAcquired(object sender, OrientationDataEventArgs e)
+        public static void Pose_Triggered(object sender, PoseEventArgs e)
         {
-            const float PI = (float)System.Math.PI;
-
-            // convert the values to a 0-9 scale (for easier digestion/understanding)
-            var roll = (int)((e.Roll + PI) / (PI * 2.0f) * 10);
-            var pitch = (int)((e.Pitch + PI) / (PI * 2.0f) * 10);
-            var yaw = (int)((e.Yaw + PI) / (PI * 2.0f) * 10);
-
-            Console.Clear();
-            Console.WriteLine(@"Roll: {0}", roll);
-            Console.WriteLine(@"Pitch: {0}", pitch);
-            Console.WriteLine(@"Yaw: {0}", yaw);
+            Console.WriteLine("{0} arm Myo is holding pose {1}!", e.Myo.Arm, e.Pose);
         }
         #endregion
     }

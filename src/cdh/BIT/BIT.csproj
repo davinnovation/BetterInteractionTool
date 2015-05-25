@@ -82,8 +82,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Connect\Connect_Keyboard.cs" />
     <Compile Include="Connect\Connect_Leapmotion.cs" />
     <Compile Include="Connect\Connect_Myo.cs" />
+    <Compile Include="Connect\FileDB_Connector.cs" />
     <Compile Include="MainWindowViewModel.cs" />
     <Compile Include="Models\Functions.cs" />
     <Compile Include="Models\Keyboard.cs" />
@@ -96,9 +98,6 @@
     </Compile>
     <Compile Include="Views\LeapMotion.xaml.cs">
       <DependentUpon>LeapMotion.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\MainContent.xaml.cs">
-      <DependentUpon>MainContent.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\Mouse.xaml.cs">
       <DependentUpon>Mouse.xaml</DependentUpon>
@@ -133,10 +132,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\LeapMotion.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Views\MainContent.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
