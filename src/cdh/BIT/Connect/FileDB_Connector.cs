@@ -63,5 +63,44 @@ namespace BIT.Connect
             File.WriteAllText(path, newtext);//Overwrite the file with newtext
             return 0;
         }
+        
+        public void Connect_DB_Func()
+        {
+            StreamReader file = new StreamReader(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\BIT_data.txt");
+            while (!file.EndOfStream)
+            {
+                string currentLine = file.ReadLine();
+                string[] taps = currentLine.Split('\t');
+                int device = Convert.ToInt16(taps[0]);
+                int ges = Convert.ToInt16(taps[1]);
+                int fun = Convert.ToInt16(taps[2]);
+                // 0 : Keyboard
+                // 1 : Mouse
+                // 2 : LeapMotion
+                // 3 : Myo
+                if (device == 0) // Keyboard
+                {
+                    
+                    _hotkeyBinder.Bind(Modifiers.Control, Keys.E).To();
+                }
+                else if (device == 1) // Mouse
+                {
+                    
+                }
+                else if (device == 2) // LeapMotion
+                {
+                    
+                }
+                else if (device == 3) // Myo
+                {
+                    
+                }
+                else
+                {
+                    Console.WriteLine("Error Reading DB");
+                }
+            }
+            file.Close();
+        }
     }
 }

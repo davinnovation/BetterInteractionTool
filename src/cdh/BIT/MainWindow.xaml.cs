@@ -88,7 +88,7 @@ namespace BIT
             
             //Keyboard
 
-            //_hotkeyBinder.Bind(Modifiers.Control, Keys.D).To(Call_Windows);
+            _hotkeyBinder.Bind(Modifiers.Control, Keys.D).To(Call_Windows);
             _hotkeyBinder.Bind(Modifiers.Control, Keys.E).To(HotkeyCallback2);
         }
 
