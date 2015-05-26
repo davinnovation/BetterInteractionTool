@@ -1,14 +1,15 @@
 ﻿using System;
 using System.Windows.Forms;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using System.IO;
 
 using Shortcut;
 using BIT_Functions;
 using Leap;
+using MyoSharp.Communication;
+using MyoSharp.Device;
+using MyoSharp.Poses;
+using MyoSharp.Exceptions;
 
 namespace BIT.Connect
 {
@@ -19,10 +20,11 @@ namespace BIT.Connect
         //keyboard
         private readonly HotkeyBinder _hotkeyBinder = new HotkeyBinder();
         Hotkey []hotkeys;
+
         // Leap Motion
         Connect_Leapmotion leapmotion_listener = new Connect_Leapmotion();
         Controller controller = new Controller();
-
+        
         public FileDB_Connector()
         {
             //keyboard
@@ -39,8 +41,7 @@ namespace BIT.Connect
 
             //Leap motion
             controller.SetPolicy(Controller.PolicyFlag.POLICY_BACKGROUND_FRAMES); // Leap Background
-            
-            //Myo
+            controller.AddListener(leapmotion_listener);
 
             //windows function
             windows_function = new Windows_function();
@@ -104,14 +105,19 @@ namespace BIT.Connect
         public void Connect_DB_Func()
         {
             //delete binding
+            
+            // Keyboard
             for (int i = 0; i < hotkeys.Length; i++)
                 if(_hotkeyBinder.IsHotkeyAlreadyBound(hotkeys[i]))
                 _hotkeyBinder.Unbind(hotkeys[i]);
 
-            for (int i = 0; i < leapmotion_listener.gesture_connnect.Length; i++ )
-                leapmotion_listener.gesture_connnect[i] = -1; ;
+            // LeapMotion
+            for (int i = 0; i < Connect_Leapmotion.gesture_connnect.Length; i++ )
+                Connect_Leapmotion.gesture_connnect[i] = -1;
 
-            controller.AddListener(leapmotion_listener);
+            // Myo
+            for (int i = 0; i < Connect_Myo.gesture_connnect.Length; i++)
+                Connect_Myo.gesture_connnect[i] = -1;
 
             //new binding
             StreamReader file = new StreamReader(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\BIT_data.txt");
@@ -132,33 +138,39 @@ namespace BIT.Connect
                     switch (fun)
                     {
                         case 0:
-                            _hotkeyBinder.Bind(hotkeys[ges]).To(windows_function.Call_Windows);break;
+                            _hotkeyBinder.Bind(hotkeys[ges]).To(windows_function.Keyboard_Copy_the_selected_item);break;
                         case 1:
-                            break;
+                            _hotkeyBinder.Bind(hotkeys[ges]).To(windows_function.Keyboard_Cut_the_selected_item); break;
                         case 2:
-                            break;
+                            _hotkeyBinder.Bind(hotkeys[ges]).To(windows_function.Keyboard_Paste_the_selected_item); break;
                         case 3:
-                            break;
+                            _hotkeyBinder.Bind(hotkeys[ges]).To(windows_function.Keyboard_Switch_open_apps); break;
                         case 4:
-                            break;
+                            _hotkeyBinder.Bind(hotkeys[ges]).To(windows_function.Keyboard_Close_the_active_app); break;
                         case 5:
-                            break;
+                            _hotkeyBinder.Bind(hotkeys[ges]).To(windows_function.Keyboard_Open_search_charm); break;
                         case 6:
-                            break;
+                            _hotkeyBinder.Bind(hotkeys[ges]).To(windows_function.Keyboard_Switch_open_apps); break;
                         case 7:
-                            break;
+                            _hotkeyBinder.Bind(hotkeys[ges]).To(windows_function.Keyboard_Delete_the_selected_item); break;
                         case 8:
-                            break;
+                            _hotkeyBinder.Bind(hotkeys[ges]).To(windows_function.Keyboard_LeftArrow); break;
                         case 9:
-                            break;
+                            _hotkeyBinder.Bind(hotkeys[ges]).To(windows_function.Keyboard_RightArrow); break;
                         case 10:
-                            break;
+                            _hotkeyBinder.Bind(hotkeys[ges]).To(windows_function.Keyboard_UpArrow); break;
                         case 11:
-                            break;
+                            _hotkeyBinder.Bind(hotkeys[ges]).To(windows_function.Keyboard_DownArrow); break;
                         case 12:
-                            break;
+                            Console.WriteLine("ConnectWINDOWS");_hotkeyBinder.Bind(hotkeys[ges]).To(windows_function.Call_Windows); break;
                         case 13:
-                            break;
+                            _hotkeyBinder.Bind(hotkeys[ges]).To(windows_function.Keyboard_ESC); break;
+                        case 14:
+                            _hotkeyBinder.Bind(hotkeys[ges]).To(windows_function.Keyboard_space); break;
+                        case 15:
+                            _hotkeyBinder.Bind(hotkeys[ges]).To(windows_function.MouseClick_left); break;
+                        case 16:
+                            _hotkeyBinder.Bind(hotkeys[ges]).To(windows_function.MouseClick_right); break;
                     }
                 }
                 else if (device == 1) // Mouse
@@ -167,10 +179,11 @@ namespace BIT.Connect
                 }
                 else if (device == 2) // LeapMotion
                 {
-                    leapmotion_listener.gesture_connnect[ges] = fun;
+                    Connect_Leapmotion.gesture_connnect[ges] = fun;
                 }
                 else if (device == 3) // Myo
                 {
+                    Connect_Myo.gesture_connnect[ges] = fun;
                 }
                 else
                 {

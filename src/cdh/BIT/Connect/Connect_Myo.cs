@@ -1,5 +1,7 @@
 ﻿using System;
 
+using BIT_Functions;
+
 using MyoSharp.Communication;
 using MyoSharp.Device;
 using MyoSharp.Poses;
@@ -9,7 +11,10 @@ namespace BIT.Connect
 {
     public class Connect_Myo
     {
-        #region Methods
+        public const int GESTURES = 4;
+        
+        public static int[] gesture_connnect = new int[GESTURES];
+
         internal static void UserInputLoop(IHub hub)
         {
             string userInput;
@@ -36,13 +41,17 @@ namespace BIT.Connect
             }
         }
 
-        #endregion
-
-        #region Event Handlers
         public static void Pose_Triggered(object sender, PoseEventArgs e)
         {
+            if(e.Pose == Pose.WaveIn)
+                new Windows_function() { }.call_function(gesture_connnect[0]);
+            else if (e.Pose == Pose.WaveOut)
+                new Windows_function() { }.call_function(gesture_connnect[1]);
+            else if (e.Pose == Pose.Fist)
+                new Windows_function() { }.call_function(gesture_connnect[2]);
+            else if (e.Pose == Pose.FingersSpread)
+                new Windows_function() { }.call_function(gesture_connnect[3]);
             Console.WriteLine("{0} arm Myo is holding pose {1}!", e.Myo.Arm, e.Pose);
         }
-        #endregion
     }
 }

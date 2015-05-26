@@ -6,8 +6,8 @@ namespace BIT_Functions
 {
     public class Windows_function
     {
-        DateTime curTime;
-        DateTime preTime;
+        static DateTime curTime = DateTime.Now;
+        static DateTime preTime = DateTime.Now;
 
         [DllImport("user32.dll", CharSet = CharSet.Auto, CallingConvention = CallingConvention.StdCall)]
         public static extern void mouse_event(uint dwFlags, uint dx, uint dy, uint cButtons, uint dwExtraInfo);
@@ -16,12 +16,6 @@ namespace BIT_Functions
         private const int MOUSEEVENTF_LEFTUP = 0x04;
         private const int MOUSEEVENTF_RIGHTDOWN = 0x08;
         private const int MOUSEEVENTF_RIGHTUP = 0x10;
-
-        public Windows_function()
-        {
-            curTime = DateTime.Now;
-            preTime = DateTime.Now;
-        }
 
         public void call_function(int which)
         {
@@ -86,14 +80,16 @@ namespace BIT_Functions
 
         private bool check_fps()
         {
-            System.Threading.Thread.Sleep(600);
             preTime = curTime;
             curTime = DateTime.Now;
 
             TimeSpan check = curTime.Subtract(preTime);
 
-            if (check.Milliseconds > 500)
+            if (check.TotalMilliseconds > 500)
+            {
+                System.Threading.Thread.Sleep(200); 
                 return true;
+            }
 
             else
                 return false;

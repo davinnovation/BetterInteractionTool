@@ -30,11 +30,11 @@ namespace BIT.Views
         public Myo()
         {
             InitializeComponent();
-
-            Myo_listBox1.Items.Add("Circle");
-            Myo_listBox1.Items.Add("Swipe");
-            Myo_listBox1.Items.Add("Key Taps");
-            Myo_listBox1.Items.Add("Screen Taps");
+            
+            Myo_listBox1.Items.Add("Wave In");
+            Myo_listBox1.Items.Add("Wave Out");
+            Myo_listBox1.Items.Add("Fist");
+            Myo_listBox1.Items.Add("Spread");
 
             Myo_listBox2.Items.Add("Copy the selected item");
             Myo_listBox2.Items.Add("Cut the selected item");
@@ -80,6 +80,8 @@ namespace BIT.Views
                 list2 = Myo_listBox2.SelectedIndex;
                 FileDB_Connector.Key_add_to_file(3, list1, list2,database); // select indexs of list  -> add text file 
             }
+            MainWindow parentWindow = (MainWindow)Window.GetWindow(this);
+            parentWindow.Call_FileDB_Connect();
 
             Myo_listBox3.Items.Add(Myo_listBox1.SelectedItem);
             Myo_listBox4.Items.Add(Myo_listBox2.SelectedItem);

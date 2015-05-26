@@ -19,7 +19,7 @@ namespace BIT.Connect
 
         private Object thisLock = new Object();
 
-        public int []gesture_connnect = new int[GESTURES];
+        public static int []gesture_connnect = new int[GESTURES];
 
         private void SafeWriteLine(String line)
         {

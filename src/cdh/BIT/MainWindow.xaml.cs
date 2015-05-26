@@ -25,14 +25,8 @@ namespace BIT
     public partial class MainWindow : MetroWindow
     {
         //private readonly HotkeyBinder _hotkeyBinder = new HotkeyBinder();
-
+        
         private readonly MainWindowViewModel _viewModel;
-
-        // Leap Motion
-        Connect_Leapmotion leapmotion_listener = new Connect_Leapmotion();
-        Controller controller = new Controller();
-
-        // Myo
 
         public FileDB_Connector connecting;
         
@@ -45,7 +39,6 @@ namespace BIT
             connecting = new FileDB_Connector();
             connecting.Connect_DB_Func();
             
-            /*
             //Myo
             var channel = Channel.Create(ChannelDriver.Create(ChannelBridge.Create()));
             var hub = Hub.Create(channel);
@@ -85,12 +78,7 @@ namespace BIT
 
             // start listening for Myo data
             channel.StartListening();
-            Connect_Myo.UserInputLoop(hub);
-            
-            //LeapMotion
-            controller.SetPolicy(Controller.PolicyFlag.POLICY_BACKGROUND_FRAMES); // Leap Background
-            controller.AddListener(leapmotion_listener);
-            */
+            Connect_Myo.UserInputLoop(hub);    
         }
 
         private void LaunchSettings(object sender, RoutedEventArgs e)

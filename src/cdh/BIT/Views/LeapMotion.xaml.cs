@@ -81,6 +81,8 @@ namespace BIT.Views
                 list2 = Leap_listBox2.SelectedIndex;
                 FileDB_Connector.Key_add_to_file(2, list1, list2,database); // select indexs of list  -> add text file 
             }
+            MainWindow parentWindow = (MainWindow)Window.GetWindow(this);
+            parentWindow.Call_FileDB_Connect();
 
             Leap_listBox3.Items.Add(Leap_listBox1.SelectedItem);
             Leap_listBox4.Items.Add(Leap_listBox2.SelectedItem);
