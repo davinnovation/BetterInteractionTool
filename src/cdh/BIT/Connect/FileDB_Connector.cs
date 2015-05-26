@@ -1,14 +1,44 @@
 ﻿using System;
+using System.Windows.Forms;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.IO;
 
+using Shortcut;
+using BIT_Functions;
+using Leap;
+
 namespace BIT.Connect
 {
     public class FileDB_Connector
     {
+        Windows_function windows_function;
+
+        //keyboard
+        private readonly HotkeyBinder _hotkeyBinder = new HotkeyBinder();
+        Hotkey []hotkeys;
+        // Leap Motion
+        Connect_Leapmotion leapmotion_listener = new Connect_Leapmotion();
+        Controller controller = new Controller();
+
+        public FileDB_Connector()
+        {
+            hotkeys = new Hotkey[9];
+            hotkeys[0] = Properties.Settings.Default.Key_0;
+            hotkeys[1] = Properties.Settings.Default.Key_1;
+            hotkeys[2] = Properties.Settings.Default.Key_2;
+            hotkeys[3] = Properties.Settings.Default.Key_3;
+            hotkeys[4] = Properties.Settings.Default.Key_4;
+            hotkeys[5] = Properties.Settings.Default.Key_5;
+            hotkeys[6] = Properties.Settings.Default.Key_6;
+            hotkeys[7] = Properties.Settings.Default.Key_7;
+            hotkeys[8] = Properties.Settings.Default.Key_8;
+
+            windows_function = new Windows_function();
+        }
+
         public static int Key_add_to_file(int Dev, int Ges, int Fun, string datapath)
         {
             string path = datapath; //get datapath
@@ -66,6 +96,10 @@ namespace BIT.Connect
         
         public void Connect_DB_Func()
         {
+            for (int i = 0; i < hotkeys.Length; i++)
+                if(_hotkeyBinder.IsHotkeyAlreadyBound(hotkeys[i]))
+                _hotkeyBinder.Unbind(hotkeys[i]);
+
             StreamReader file = new StreamReader(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\BIT_data.txt");
             while (!file.EndOfStream)
             {
@@ -78,10 +112,40 @@ namespace BIT.Connect
                 // 1 : Mouse
                 // 2 : LeapMotion
                 // 3 : Myo
+                
                 if (device == 0) // Keyboard
                 {
-                    
-                    _hotkeyBinder.Bind(Modifiers.Control, Keys.E).To();
+                    switch (fun)
+                    {
+                        case 0:
+                            _hotkeyBinder.Bind(hotkeys[ges]).To(windows_function.Call_Windows);break;
+                        case 1:
+                            break;
+                        case 2:
+                            break;
+                        case 3:
+                            break;
+                        case 4:
+                            break;
+                        case 5:
+                            break;
+                        case 6:
+                            break;
+                        case 7:
+                            break;
+                        case 8:
+                            break;
+                        case 9:
+                            break;
+                        case 10:
+                            break;
+                        case 11:
+                            break;
+                        case 12:
+                            break;
+                        case 13:
+                            break;
+                    }
                 }
                 else if (device == 1) // Mouse
                 {

@@ -44,10 +44,7 @@ namespace BIT.Views
             Key_listBox1.Items.Add("Ctrl+T");
             Key_listBox1.Items.Add("Ctrl+G");
             Key_listBox1.Items.Add("Ctrl+V");
-            Key_listBox1.Items.Add("Windows+X");
-            Key_listBox1.Items.Add("Windows+S");
-            Key_listBox1.Items.Add("Windows+M");
-
+            
             Key_listBox2.Items.Add("Copy the selected item");
             Key_listBox2.Items.Add("Cut the selected item");
             Key_listBox2.Items.Add("Paste the selected item");
@@ -90,6 +87,9 @@ namespace BIT.Views
                 list2 = Key_listBox2.SelectedIndex;
                 FileDB_Connector.Key_add_to_file(0, list1, list2, database); // select indexs of list  -> add text file 
             }
+
+            MainWindow parentWindow = (MainWindow)Window.GetWindow(this);
+            parentWindow.Call_FileDB_Connect();
 
             Key_listBox3.Items.Add(Key_listBox1.SelectedItem);
             Key_listBox4.Items.Add(Key_listBox2.SelectedItem);

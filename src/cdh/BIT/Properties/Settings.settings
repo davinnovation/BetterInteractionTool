@@ -1,7 +1,57 @@
 ﻿<?xml version='1.0' encoding='utf-8'?>
-<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)">
-  <Profiles>
-    <Profile Name="(Default)" />
-  </Profiles>
-  <Settings />
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="BIT.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="Key_0" Type="Shortcut.Hotkey" Scope="User">
+      <Value Profile="(Default)">Control, F</Value>
+    </Setting>
+    <Setting Name="Key_1" Type="Shortcut.Hotkey" Scope="User">
+      <Value Profile="(Default)">Control, C</Value>
+    </Setting>
+    <Setting Name="Key_2" Type="Shortcut.Hotkey" Scope="User">
+      <Value Profile="(Default)">Control, V</Value>
+    </Setting>
+    <Setting Name="Key_3" Type="Shortcut.Hotkey" Scope="User">
+      <Value Profile="(Default)">Control, B</Value>
+    </Setting>
+    <Setting Name="Key_4" Type="Shortcut.Hotkey" Scope="User">
+      <Value Profile="(Default)">Control, N</Value>
+    </Setting>
+    <Setting Name="Key_5" Type="Shortcut.Hotkey" Scope="User">
+      <Value Profile="(Default)">Control, H</Value>
+    </Setting>
+    <Setting Name="Key_6" Type="Shortcut.Hotkey" Scope="User">
+      <Value Profile="(Default)">Control, T</Value>
+    </Setting>
+    <Setting Name="Key_7" Type="Shortcut.Hotkey" Scope="User">
+      <Value Profile="(Default)">Control, G</Value>
+    </Setting>
+    <Setting Name="Key_8" Type="Shortcut.Hotkey" Scope="User">
+      <Value Profile="(Default)">Control, V</Value>
+    </Setting>
+    <Setting Name="Leap_0" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="Leap_1" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="Leap_2" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="Leap_3" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="Myo_0" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="Myo_1" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="Myo_2" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="Myo_3" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+  </Settings>
 </SettingsFile>
