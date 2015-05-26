@@ -243,6 +243,7 @@
     <Content Include="lib\LeapMotion_2.5.5\lib\x86\LeapJava.dll" />
     <Content Include="lib\LeapMotion_2.5.5\lib\x86\msvcp120.dll" />
     <Content Include="lib\LeapMotion_2.5.5\lib\x86\msvcr120.dll" />
+    <Resource Include="resources\DoubleMajor.jpg" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="lib\Myo_0.8.1\" />

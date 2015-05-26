@@ -8,5 +8,9 @@ namespace BIT.Connect
 {
     class Connect_Keyboard
     {
+        public void keyboard_connect()
+        {
+
+        }
     }
 }

@@ -87,7 +87,8 @@ namespace BIT
             controller.AddListener(leapmotion_listener);
             
             //Keyboard
-            _hotkeyBinder.Bind(Modifiers.Control, Keys.D).To(HotkeyCallback);
+
+            //_hotkeyBinder.Bind(Modifiers.Control, Keys.D).To(Call_Windows);
             _hotkeyBinder.Bind(Modifiers.Control, Keys.E).To(HotkeyCallback2);
         }
 
@@ -104,23 +105,11 @@ namespace BIT
         private void HotkeyCallback()
         {
             new Windows_function() { }.Call_Windows();
-            /*IntPtr hWndCharmBar = FindWindow("Charm Bar", null);
-            if(hWndCharmBar != null)
-                ShowWindow(hWndCharmBar, 0);
-            else
-                ShowWindow(hWndCharmBar, 0);
-            */
         }
 
         private void HotkeyCallback2()
         {
             new Windows_function() { }.Keyboard_space();
-            /*IntPtr hWndCharmBar = FindWindow("Charm Bar", null);
-            if(hWndCharmBar != null)
-                ShowWindow(hWndCharmBar, 0);
-            else
-                ShowWindow(hWndCharmBar, 0);
-            */
         }
     }
 }

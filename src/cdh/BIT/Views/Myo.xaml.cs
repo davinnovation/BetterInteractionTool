@@ -36,9 +36,17 @@ namespace BIT.Views
             Myo_listBox1.Items.Add("Key Taps");
             Myo_listBox1.Items.Add("Screen Taps");
 
-            Myo_listBox2.Items.Add("Function1");
-            Myo_listBox2.Items.Add("Function2");
-            Myo_listBox2.Items.Add("Function3");
+            Myo_listBox2.Items.Add("Copy the selected item");
+            Myo_listBox2.Items.Add("Cut the selected item");
+            Myo_listBox2.Items.Add("Paste the selected item");
+            Myo_listBox2.Items.Add("Switch between open apps");
+            Myo_listBox2.Items.Add("Close the active item");
+            Myo_listBox2.Items.Add("Open the search charm to search files");
+            Myo_listBox2.Items.Add("Lock screen orientation");
+            Myo_listBox2.Items.Add("Switch input language");
+            Myo_listBox2.Items.Add("Switch between open apps");
+            Myo_listBox2.Items.Add("Delete the selected item");
+            Myo_listBox2.Items.Add("Open Windows Home");
 
             StreamReader file = new StreamReader(database);
             while (!file.EndOfStream)

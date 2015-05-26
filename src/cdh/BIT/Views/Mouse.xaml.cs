@@ -36,9 +36,17 @@ namespace BIT.Views
             Mouse_listBox1.Items.Add("Key Taps");
             Mouse_listBox1.Items.Add("Screen Taps");
 
-            Mouse_listBox2.Items.Add("Function1");
-            Mouse_listBox2.Items.Add("Function2");
-            Mouse_listBox2.Items.Add("Function3");
+            Mouse_listBox2.Items.Add("Copy the selected item");
+            Mouse_listBox2.Items.Add("Cut the selected item");
+            Mouse_listBox2.Items.Add("Paste the selected item");
+            Mouse_listBox2.Items.Add("Switch between open apps");
+            Mouse_listBox2.Items.Add("Close the active item");
+            Mouse_listBox2.Items.Add("Open the search charm to search files");
+            Mouse_listBox2.Items.Add("Lock screen orientation");
+            Mouse_listBox2.Items.Add("Switch input language");
+            Mouse_listBox2.Items.Add("Switch between open apps");
+            Mouse_listBox2.Items.Add("Delete the selected item");
+            Mouse_listBox2.Items.Add("Open Windows Home");
 
             StreamReader file = new StreamReader(database);
             while (!file.EndOfStream)

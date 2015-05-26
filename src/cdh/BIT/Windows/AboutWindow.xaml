@@ -16,8 +16,8 @@
             <ColumnDefinition Width="327*"/>
             <ColumnDefinition Width="190*"/>
         </Grid.ColumnDefinitions>
-        <Image Name="clock" Stretch="Uniform" Source="/Resources/Clock.jpg" Margin="-14,10,177,206" Grid.RowSpan="2" />
-        <TextBlock Text="LeapMotion program" FontSize="30" HorizontalAlignment="Center" Margin="150,24,74,228" Width="293" Grid.ColumnSpan="2" Grid.Row="1"></TextBlock>
+        <Image Name="Logo" Stretch="Uniform" Source="/Resources/DoubleMajor.jpg" Margin="-14,10,177,206" Grid.RowSpan="2" />
+        <TextBlock Text="Double Major Team" FontSize="30" HorizontalAlignment="Center" Margin="150,24,74,228" Width="293" Grid.ColumnSpan="2" Grid.Row="1"></TextBlock>
         <TextBlock FontSize="22" Grid.ColumnSpan="2" Margin="10,24,-10,-45" Grid.Row="1"><Run/><LineBreak/><Run/><LineBreak/><Run/><LineBreak/><Run/><LineBreak/><Run Text="  BetterinteractionTool for Windows"/></TextBlock>
         <TextBlock FontSize="22" Grid.RowSpan="2" Margin="10,-9,180,9" Grid.ColumnSpan="2"><Run/><LineBreak/><Run/><LineBreak/><Run/><LineBreak/><Run/><LineBreak/><Run/><LineBreak/><Run Text="  Version: Beta.1.0"/><LineBreak/><Run/><LineBreak/><Run FontSize="17" FontFamily="맑은 고딕" Text="  ⓒ2015 Second Major Team"/><LineBreak/><Run FontSize="17" FontFamily="맑은 고딕" Text="  Thankyou for using this program"/><LineBreak/><Run FontSize="13.3333333333333" FontFamily="맑은 고딕"/><LineBreak/><Run FontSize="13.3333333333333" FontFamily="맑은 고딕" Text=""/><LineBreak/><Run Text="  "/></TextBlock>
     </Grid>

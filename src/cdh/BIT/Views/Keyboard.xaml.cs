@@ -48,9 +48,17 @@ namespace BIT.Views
             Key_listBox1.Items.Add("Windows+S");
             Key_listBox1.Items.Add("Windows+M");
 
-            Key_listBox2.Items.Add("Function1");
-            Key_listBox2.Items.Add("Function2");
-            Key_listBox2.Items.Add("Function3");
+            Key_listBox2.Items.Add("Copy the selected item");
+            Key_listBox2.Items.Add("Cut the selected item");
+            Key_listBox2.Items.Add("Paste the selected item");
+            Key_listBox2.Items.Add("Switch between open apps");
+            Key_listBox2.Items.Add("Close the active item");
+            Key_listBox2.Items.Add("Open the search charm to search files");
+            Key_listBox2.Items.Add("Lock screen orientation");
+            Key_listBox2.Items.Add("Switch input language");
+            Key_listBox2.Items.Add("Switch between open apps");
+            Key_listBox2.Items.Add("Delete the selected item");
+            Key_listBox2.Items.Add("Open Windows Home");
 
             int keyborad = 0;
             int gesture = 1;
