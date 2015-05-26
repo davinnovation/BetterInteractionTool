@@ -8,7 +8,7 @@ namespace BIT_Functions
     {
         DateTime curTime;
         DateTime preTime;
-        
+
         [DllImport("user32.dll", CharSet = CharSet.Auto, CallingConvention = CallingConvention.StdCall)]
         public static extern void mouse_event(uint dwFlags, uint dx, uint dy, uint cButtons, uint dwExtraInfo);
 
@@ -23,6 +23,67 @@ namespace BIT_Functions
             preTime = DateTime.Now;
         }
 
+        public void call_function(int which)
+        {
+            switch (which)
+            {
+                case -1:
+                    Console.WriteLine("None Connected");
+                    break;
+                case 0:
+                    this.Keyboard_Copy_the_selected_item();
+                    break;
+                case 1:
+                    this.Keyboard_Cut_the_selected_item();
+                    break;
+                case 2:
+                    this.Keyboard_Paste_the_selected_item();
+                    break;
+                case 3:
+                    this.Keyboard_Switch_open_apps();
+                    break;
+                case 4:
+                    this.Keyboard_Close_the_active_app();
+                    break;
+                case 5:
+                    this.Keyboard_Open_search_charm();
+                    break;
+                case 6:
+                    this.Keyboard_Switch_open_apps();
+                    break;
+                case 7:
+                    this.Keyboard_Delete_the_selected_item();
+                    break;
+                case 8:
+                    this.Keyboard_LeftArrow();
+                    break;
+                case 9:
+                    this.Keyboard_RightArrow();
+                    break;
+                case 10:
+                    this.Keyboard_UpArrow();
+                    break;
+                case 11:
+                    this.Keyboard_DownArrow();
+                    break;
+                case 12:
+                    this.Call_Windows();
+                    break;
+                case 13:
+                    this.Keyboard_ESC();
+                    break;
+                case 14:
+                    this.Keyboard_space();
+                    break;
+                case 15:
+                    this.MouseClick_left();
+                    break;
+                case 16:
+                    this.MouseClick_right();
+                    break;
+            }
+        }
+
         private bool check_fps()
         {
             System.Threading.Thread.Sleep(600);
@@ -31,25 +92,102 @@ namespace BIT_Functions
 
             TimeSpan check = curTime.Subtract(preTime);
 
-            if(check.Milliseconds > 500)
+            if (check.Milliseconds > 500)
                 return true;
 
-            else 
+            else
                 return false;
         }
 
         public void Call_Windows()
         {
-            if ( check_fps() )
+            if (check_fps())
             {
                 Keysend.KeyDown(Keys.LWin);
                 Keysend.KeyUp(Keys.LWin);
             }
         }
 
+        public void Keyboard_Copy_the_selected_item()
+        {
+            if (check_fps())
+            {
+                Keysend.KeyDown(Keys.Control);
+                Keysend.KeyDown(Keys.C);
+                Keysend.KeyUp(Keys.Control);
+                Keysend.KeyUp(Keys.C);
+            }
+        }
+
+        public void Keyboard_Cut_the_selected_item()
+        {
+            if (check_fps())
+            {
+                Keysend.KeyDown(Keys.Control);
+                Keysend.KeyDown(Keys.X);
+                Keysend.KeyUp(Keys.Control);
+                Keysend.KeyUp(Keys.X);
+            }
+        }
+
+        public void Keyboard_Paste_the_selected_item()
+        {
+            if (check_fps())
+            {
+                Keysend.KeyDown(Keys.Control);
+                Keysend.KeyDown(Keys.V);
+                Keysend.KeyUp(Keys.Control);
+                Keysend.KeyUp(Keys.V);
+            }
+        }
+
+        public void Keyboard_Switch_open_apps()
+        {
+            if (check_fps())
+            {
+                Keysend.KeyDown(Keys.Alt);
+                Keysend.KeyDown(Keys.Tab);
+                Keysend.KeyUp(Keys.Alt);
+                Keysend.KeyUp(Keys.Tab);
+            }
+        }
+
+        public void Keyboard_Close_the_active_app()
+        {
+            if (check_fps())
+            {
+                Keysend.KeyDown(Keys.Alt);
+                Keysend.KeyDown(Keys.F4);
+                Keysend.KeyUp(Keys.Alt);
+                Keysend.KeyUp(Keys.F4);
+            }
+        }
+
+        public void Keyboard_Open_search_charm()
+        {
+            if (check_fps())
+            {
+                Keysend.KeyDown(Keys.LWin);
+                Keysend.KeyDown(Keys.F);
+                Keysend.KeyUp(Keys.LWin);
+                Keysend.KeyUp(Keys.F);
+            }
+        }
+
+        public void Keyboard_Delete_the_selected_item()
+        {
+            if (check_fps())
+            {
+                Keysend.KeyDown(Keys.Control);
+                Keysend.KeyDown(Keys.D);
+                Keysend.KeyUp(Keys.Control);
+                Keysend.KeyUp(Keys.D);
+            }
+        }
+
         public void Keyboard_LeftArrow()
         {
-            if ( check_fps() )
+            if (check_fps())
             {
                 Keysend.KeyDown(Keys.Left);
                 Keysend.KeyUp(Keys.Left);
@@ -62,6 +200,24 @@ namespace BIT_Functions
             {
                 Keysend.KeyDown(Keys.Right);
                 Keysend.KeyUp(Keys.Right);
+            }
+        }
+
+        public void Keyboard_UpArrow()
+        {
+            if (check_fps())
+            {
+                Keysend.KeyDown(Keys.Up);
+                Keysend.KeyUp(Keys.Up);
+            }
+        }
+
+        public void Keyboard_DownArrow()
+        {
+            if (check_fps())
+            {
+                Keysend.KeyDown(Keys.Down);
+                Keysend.KeyUp(Keys.Down);
             }
         }
 

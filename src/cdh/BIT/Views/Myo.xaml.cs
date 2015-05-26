@@ -42,11 +42,17 @@ namespace BIT.Views
             Myo_listBox2.Items.Add("Switch between open apps");
             Myo_listBox2.Items.Add("Close the active item");
             Myo_listBox2.Items.Add("Open the search charm to search files");
-            Myo_listBox2.Items.Add("Lock screen orientation");
-            Myo_listBox2.Items.Add("Switch input language");
-            Myo_listBox2.Items.Add("Switch between open apps");
-            Myo_listBox2.Items.Add("Delete the selected item");
-            Myo_listBox2.Items.Add("Open Windows Home");
+            Myo_listBox2.Items.Add("Switch between open apps (except desktop apps)");
+            Myo_listBox2.Items.Add("Delete the selected item and move it to the Recycle Bin");
+            Myo_listBox2.Items.Add("Move Left");
+            Myo_listBox2.Items.Add("Move Right");
+            Myo_listBox2.Items.Add("Move up");
+            Myo_listBox2.Items.Add("Move down");
+            Myo_listBox2.Items.Add("Windows home");
+            Myo_listBox2.Items.Add("Esc");
+            Myo_listBox2.Items.Add("Space");
+            Myo_listBox2.Items.Add("Myo click left");
+            Myo_listBox2.Items.Add("Myo click right");
 
             StreamReader file = new StreamReader(database);
             while (!file.EndOfStream)

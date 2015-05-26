@@ -90,13 +90,7 @@ namespace BIT
             //LeapMotion
             controller.SetPolicy(Controller.PolicyFlag.POLICY_BACKGROUND_FRAMES); // Leap Background
             controller.AddListener(leapmotion_listener);
-            
-            //Keyboard
-            Windows_function test = new Windows_function();
-            //_hotkeyBinder.Bind(Modifiers.Control, Keys.D).To(test.Call_Windows);
-            //_hotkeyBinder.Bind(Modifiers.Control, Keys.E).To(HotkeyCallback2);
             */
-
         }
 
         private void LaunchSettings(object sender, RoutedEventArgs e)

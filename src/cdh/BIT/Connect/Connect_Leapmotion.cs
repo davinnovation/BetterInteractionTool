@@ -7,7 +7,19 @@ namespace BIT.Connect
 {
     public class Connect_Leapmotion : Listener
     {
+        public const int GESTURES = 6;
+        /*
+         *  0 - clockwise
+         *  1 - countercolckwise
+         *  2 - swipe right 
+         *  3 - swipe left
+         *  4 - key tap
+         *  5 - screen tap
+         */
+
         private Object thisLock = new Object();
+
+        public int []gesture_connnect = new int[GESTURES];
 
         private void SafeWriteLine(String line)
         {
@@ -62,42 +74,29 @@ namespace BIT.Connect
                         {
                             //Clockwise if angle is less than 90 degrees
                             //clockwiseness = "clockwise";
-                            Console.WriteLine("CallWindows");
-                            new Windows_function() { }.Call_Windows();
-                        
+                            new Windows_function() { }.call_function(gesture_connnect[0]);
                         }
                         else
                         {
                             //clockwiseness = "counterclockwise";
-                            Console.WriteLine("CallMouseclickLeft");
-                            new Windows_function() { }.MouseClick_left();
+                            new Windows_function() { }.call_function(gesture_connnect[1]);
                         }
                         break;
                     case Gesture.GestureType.TYPE_SWIPE:
                         SwipeGesture swipe = new SwipeGesture(gesture);
-                        SafeWriteLine("  Swipe id: " + swipe.Id
-                                       + ", " + swipe.State
-                                       + ", position: " + swipe.Position
-                                       + ", direction: " + swipe.Direction
-                                       + ", speed: " + swipe.Speed);
+
                         if (swipe.Direction.x > 0.5)
-                            new Windows_function() { }.Keyboard_RightArrow();
+                            new Windows_function() { }.call_function(gesture_connnect[2]);
                         else
-                            new Windows_function() { }.Keyboard_LeftArrow();
+                            new Windows_function() { }.call_function(gesture_connnect[3]);
                         break;
                     case Gesture.GestureType.TYPE_KEY_TAP:
                         KeyTapGesture keytap = new KeyTapGesture(gesture);
-                        SafeWriteLine("  Tap id: " + keytap.Id
-                                       + ", " + keytap.State
-                                       + ", position: " + keytap.Position
-                                       + ", direction: " + keytap.Direction);
+                        new Windows_function() { }.call_function(gesture_connnect[4]);
                         break;
                     case Gesture.GestureType.TYPE_SCREEN_TAP:
                         ScreenTapGesture screentap = new ScreenTapGesture(gesture);
-                        SafeWriteLine("  Tap id: " + screentap.Id
-                                       + ", " + screentap.State
-                                       + ", position: " + screentap.Position
-                                       + ", direction: " + screentap.Direction);
+                        new Windows_function() { }.call_function(gesture_connnect[5]);
                         break;
                     default:
                         SafeWriteLine("  Unknown gesture type.");

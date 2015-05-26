@@ -25,6 +25,7 @@ namespace BIT.Connect
 
         public FileDB_Connector()
         {
+            //keyboard
             hotkeys = new Hotkey[9];
             hotkeys[0] = Properties.Settings.Default.Key_0;
             hotkeys[1] = Properties.Settings.Default.Key_1;
@@ -36,6 +37,12 @@ namespace BIT.Connect
             hotkeys[7] = Properties.Settings.Default.Key_7;
             hotkeys[8] = Properties.Settings.Default.Key_8;
 
+            //Leap motion
+            controller.SetPolicy(Controller.PolicyFlag.POLICY_BACKGROUND_FRAMES); // Leap Background
+            
+            //Myo
+
+            //windows function
             windows_function = new Windows_function();
         }
 
@@ -96,10 +103,17 @@ namespace BIT.Connect
         
         public void Connect_DB_Func()
         {
+            //delete binding
             for (int i = 0; i < hotkeys.Length; i++)
                 if(_hotkeyBinder.IsHotkeyAlreadyBound(hotkeys[i]))
                 _hotkeyBinder.Unbind(hotkeys[i]);
 
+            for (int i = 0; i < leapmotion_listener.gesture_connnect.Length; i++ )
+                leapmotion_listener.gesture_connnect[i] = -1; ;
+
+            controller.AddListener(leapmotion_listener);
+
+            //new binding
             StreamReader file = new StreamReader(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\BIT_data.txt");
             while (!file.EndOfStream)
             {
@@ -153,11 +167,10 @@ namespace BIT.Connect
                 }
                 else if (device == 2) // LeapMotion
                 {
-                    
+                    leapmotion_listener.gesture_connnect[ges] = fun;
                 }
                 else if (device == 3) // Myo
                 {
-                    
                 }
                 else
                 {

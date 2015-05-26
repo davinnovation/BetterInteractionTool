@@ -30,8 +30,10 @@ namespace BIT.Views
         {
             InitializeComponent();
 
-            Leap_listBox1.Items.Add("Circle");
-            Leap_listBox1.Items.Add("Swipe");
+            Leap_listBox1.Items.Add("Circle Clock");
+            Leap_listBox1.Items.Add("Circle ClockWise");
+            Leap_listBox1.Items.Add("Swipe Right");
+            Leap_listBox1.Items.Add("Swipe Left");
             Leap_listBox1.Items.Add("Key Taps");
             Leap_listBox1.Items.Add("Screen Taps");
 
@@ -41,11 +43,17 @@ namespace BIT.Views
             Leap_listBox2.Items.Add("Switch between open apps");
             Leap_listBox2.Items.Add("Close the active item");
             Leap_listBox2.Items.Add("Open the search charm to search files");
-            Leap_listBox2.Items.Add("Lock screen orientation");
-            Leap_listBox2.Items.Add("Switch input language");
-            Leap_listBox2.Items.Add("Switch between open apps");
-            Leap_listBox2.Items.Add("Delete the selected item");
-            Leap_listBox2.Items.Add("Open Windows Home");
+            Leap_listBox2.Items.Add("Switch between open apps (except desktop apps)");
+            Leap_listBox2.Items.Add("Delete the selected item and move it to the Recycle Bin");
+            Leap_listBox2.Items.Add("Move Left");
+            Leap_listBox2.Items.Add("Move Right");
+            Leap_listBox2.Items.Add("Move up");
+            Leap_listBox2.Items.Add("Move down");
+            Leap_listBox2.Items.Add("Windows home");
+            Leap_listBox2.Items.Add("Esc");
+            Leap_listBox2.Items.Add("Space");
+            Leap_listBox2.Items.Add("Mouse click left");
+            Leap_listBox2.Items.Add("Mouse click right");
 
             StreamReader file = new StreamReader(database);
             while (!file.EndOfStream)

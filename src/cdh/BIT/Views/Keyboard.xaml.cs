@@ -44,18 +44,24 @@ namespace BIT.Views
             Key_listBox1.Items.Add("Ctrl+T");
             Key_listBox1.Items.Add("Ctrl+G");
             Key_listBox1.Items.Add("Ctrl+V");
-            
+
             Key_listBox2.Items.Add("Copy the selected item");
             Key_listBox2.Items.Add("Cut the selected item");
             Key_listBox2.Items.Add("Paste the selected item");
             Key_listBox2.Items.Add("Switch between open apps");
             Key_listBox2.Items.Add("Close the active item");
             Key_listBox2.Items.Add("Open the search charm to search files");
-            Key_listBox2.Items.Add("Lock screen orientation");
-            Key_listBox2.Items.Add("Switch input language");
-            Key_listBox2.Items.Add("Switch between open apps");
-            Key_listBox2.Items.Add("Delete the selected item");
-            Key_listBox2.Items.Add("Open Windows Home");
+            Key_listBox2.Items.Add("Switch between open apps (except desktop apps)");
+            Key_listBox2.Items.Add("Delete the selected item and move it to the Recycle Bin");
+            Key_listBox2.Items.Add("Move Left");
+            Key_listBox2.Items.Add("Move Right");
+            Key_listBox2.Items.Add("Move up");
+            Key_listBox2.Items.Add("Move down");
+            Key_listBox2.Items.Add("Windows home");
+            Key_listBox2.Items.Add("Esc");
+            Key_listBox2.Items.Add("Space");
+            Key_listBox2.Items.Add("Mouse click left");
+            Key_listBox2.Items.Add("Mouse click right");
 
             int keyborad = 0;
             int gesture = 1;

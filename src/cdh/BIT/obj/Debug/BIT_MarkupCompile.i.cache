@@ -16,5 +16,5 @@ C:\Users\dongheon\Documents\GitHub\BetterInteractionTool\src\cdh\BIT\App.xaml
 20710296280
 MainWindow.xaml;resources\Icons.xaml;Views\Keyboard.xaml;Views\LeapMotion.xaml;Views\Mouse.xaml;Views\Myo.xaml;Windows\AboutWindow.xaml;Windows\SettingsWindow.xaml;
 
-False
+True
 

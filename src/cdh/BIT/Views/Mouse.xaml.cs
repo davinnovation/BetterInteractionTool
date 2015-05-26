@@ -31,22 +31,23 @@ namespace BIT.Views
         {
             InitializeComponent();
 
-            Mouse_listBox1.Items.Add("Circle");
-            Mouse_listBox1.Items.Add("Swipe");
-            Mouse_listBox1.Items.Add("Key Taps");
-            Mouse_listBox1.Items.Add("Screen Taps");
-
             Mouse_listBox2.Items.Add("Copy the selected item");
             Mouse_listBox2.Items.Add("Cut the selected item");
             Mouse_listBox2.Items.Add("Paste the selected item");
             Mouse_listBox2.Items.Add("Switch between open apps");
             Mouse_listBox2.Items.Add("Close the active item");
             Mouse_listBox2.Items.Add("Open the search charm to search files");
-            Mouse_listBox2.Items.Add("Lock screen orientation");
-            Mouse_listBox2.Items.Add("Switch input language");
-            Mouse_listBox2.Items.Add("Switch between open apps");
-            Mouse_listBox2.Items.Add("Delete the selected item");
-            Mouse_listBox2.Items.Add("Open Windows Home");
+            Mouse_listBox2.Items.Add("Switch between open apps (except desktop apps)");
+            Mouse_listBox2.Items.Add("Delete the selected item and move it to the Recycle Bin");
+            Mouse_listBox2.Items.Add("Move Left");
+            Mouse_listBox2.Items.Add("Move Right");
+            Mouse_listBox2.Items.Add("Move up");
+            Mouse_listBox2.Items.Add("Move down");
+            Mouse_listBox2.Items.Add("Windows home");
+            Mouse_listBox2.Items.Add("Esc");
+            Mouse_listBox2.Items.Add("Space");
+            Mouse_listBox2.Items.Add("Mouse click left");
+            Mouse_listBox2.Items.Add("Mouse click right");
 
             StreamReader file = new StreamReader(database);
             while (!file.EndOfStream)
