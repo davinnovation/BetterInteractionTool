@@ -17,4 +17,5 @@
 <h4>Before start project</h4>
 <p>Install https://visualstudiogallery.msdn.microsoft.com/1ec7db13-3363-46c9-851f-1ce455f66970</p>
 <p>Change Build event post-build event</p>
-@Copyright 이중전공 Team
+
+See the LICENSE
